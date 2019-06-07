@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/squirrelinsouthern/Monent-s-Garden/issues"
   },
-  "homepage": "https://github.com/squirrelinsouthern/Monent-s-Garden#readme"
+  "homepage": "https://github.com/squirrelinsouthern/Monent-s-Garden#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
