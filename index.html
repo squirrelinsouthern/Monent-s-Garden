@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monent's Garden</title>
+    <style>
+        * {padding: 0;margin: 0;box-sizing:border-box;}
+        :root{
+            --button-height:32px;
+            --font-size:14px;
+            --border-radius:4px;
+            --button-color-font:white;
+            --button-bg:#5C8DF6;
+            --button-bg-active:#507BD8;
+            --button-bg-hover:#507BD8;
+            --button-shadow:2px 2px 4px rgba(79,106,230,0.3);
+        }
+        #app{
+            margin: 20px;
+        }
+    </style>
+    <style>
+        .m-button{
+            font-size: var(--font-size);
+            height: var(--button-height);
+            padding: 0 2em;
+            color:var(--button-color-font);
+            border-radius: var(--border-radius);
+            background: var(--button-bg);
+            border: 1px solid transparent;
+        }
+        .m-button:hover{
+            box-shadow: var(--button-shadow);
+        }
+        .m-button:active{
+            background:var(--button-bg-active);
+        }
+        .m-button:focus{
+            outline: none;
+        }
+    </style>
+</head>
+
+
+<body>
+<div id="app">
+    <m-button class="m-button"></m-button>
+</div>
+
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="./button.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'hi'
+        }
+    })
+</script>
+</body>
+</html>
