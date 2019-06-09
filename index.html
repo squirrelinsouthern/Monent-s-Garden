@@ -7,32 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Monent-s-Garden</title>
     <style>
-        * {padding: 0;margin: 0;box-sizing:border-box;}
-        :root {
-            --button-height:36px;
-            --font-size:14px;
-            --border-radius:4px;
-            --button-color-font:white;
-            --button-bg:#5C8DF6;
-            --button-bg-active:#507BD8;
-            --button-bg-hover:#507BD8;
-            --button-shadow:2px 2px 4px rgba(79,106,230,0.3);
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
-        #app{
+
+        :root {
+            --button-height: 36px;
+            --font-size: 14px;
+            --border-radius: 4px;
+            --button-color-font: white;
+            --button-bg: #5C8DF6;
+            --button-bg-active: #507BD8;
+            --button-bg-hover: #507BD8;
+            --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.3);
+        }
+
+        #app {
             margin: 20px;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
+    </style>
+    <style>
+
     </style>
 </head>
 
 
 <body>
-    <div id="app">
-        <mo-button></mo-button>
-    </div>
+<div id="app">
+    <m-button>
+        默认样式
+    </m-button>
+    <m-button icon="smile" where-icon="left">
+        默认样式
+    </m-button>
+    <m-button icon="smile" where-icon="right">
+        默认样式
+    </m-button>
+</div>
 
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1233285_01ileamuur6v.js"></script>
 </body>
 </html>
