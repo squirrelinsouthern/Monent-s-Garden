@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Monent's Garden</title>
+    <title>Monent-s-Garden</title>
     <style>
         * {padding: 0;margin: 0;box-sizing:border-box;}
-        :root{
-            --button-height:32px;
+        :root {
+            --button-height:36px;
             --font-size:14px;
             --border-radius:4px;
             --button-color-font:white;
@@ -21,44 +21,18 @@
         #app{
             margin: 20px;
         }
-    </style>
-    <style>
-        .m-button{
+        body{
             font-size: var(--font-size);
-            height: var(--button-height);
-            padding: 0 2em;
-            color:var(--button-color-font);
-            border-radius: var(--border-radius);
-            background: var(--button-bg);
-            border: 1px solid transparent;
-        }
-        .m-button:hover{
-            box-shadow: var(--button-shadow);
-        }
-        .m-button:active{
-            background:var(--button-bg-active);
-        }
-        .m-button:focus{
-            outline: none;
         }
     </style>
 </head>
 
 
 <body>
-<div id="app">
-    <m-button class="m-button"></m-button>
-</div>
+    <div id="app">
+        <mo-button></mo-button>
+    </div>
 
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="./button.js"></script>
-<script>
-    new Vue({
-        el:'#app',
-        data:{
-            message:'hi'
-        }
-    })
-</script>
+<script src="./src/app.js"></script>
 </body>
 </html>
