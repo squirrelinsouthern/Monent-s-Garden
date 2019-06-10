@@ -1,6 +1,7 @@
 <template>
     <button class="m-button" :class="{[`icon-${whereIcon}`]:true}">
-        <m-icon v-if="icon" :name="icon" class="icon"></m-icon>
+        <m-icon class="icon" v-if="icon" :name="icon" ></m-icon>
+        <m-icon class="icon loading" v-if="icon" name="Loading" ></m-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -23,8 +24,14 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+    @keyframes loading{
+        0% {transform: rotate(0);}
+        100% {transform: rotate(360deg);}
+    }
+    .loading{
+        animation: loading 1s infinite linear;
+    }
 
     .m-button{
         font-size: var(--font-size);
