@@ -1,28 +1,30 @@
 <template>
     <button class="m-button" :class="{[`icon-${whereIcon}`]:true}">
-        <svg class="icon" v-if="icon">
-            <use :xlink:href="`#m-${icon}`"></use>
-        </svg>
+        <m-icon v-if="icon" :name="icon" class="icon"></m-icon>
         <div class="content">
             <slot></slot>
         </div>
-
     </button>
 </template>
 
 <script>
     export default {
-        props:['icon','whereIcon']
+        // props:['icon','whereIcon']
+        props:{
+            icon:{},
+            whereIcon:{
+                type:String,
+                default:'left',
+                validator(value){
+                    return value === 'left' || value === 'right'
+                }
+            }
+        }
     }
 </script>
 
 <style>
-    .icon {
-        width: 1.2em;
-        height: 1.2em;
 
-        fill:var(--button-color-font);
-    }
 
     .m-button{
         font-size: var(--font-size);
