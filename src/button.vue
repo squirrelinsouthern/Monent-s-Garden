@@ -1,7 +1,7 @@
 <template>
-    <button class="m-button" :class="{[`icon-${whereIcon}`]:true}">
-        <m-icon class="icon" v-if="icon" :name="icon" ></m-icon>
-        <m-icon class="icon loading" v-if="icon" name="Loading" ></m-icon>
+    <button class="m-button" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('change')">
+        <m-icon class="icon" v-if="icon && !loading" :icon="icon" ></m-icon>
+        <m-icon class="icon spin" v-if="loading" icon="loading" ></m-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -13,6 +13,10 @@
         // props:['icon','whereIcon']
         props:{
             icon:{},
+            loading:{
+                type:Boolean,
+                default:false
+            },
             whereIcon:{
                 type:String,
                 default:'left',
@@ -20,17 +24,22 @@
                     return value === 'left' || value === 'right'
                 }
             }
+        },
+        methods:{
+            x(){
+                this.$emit('click')
+            }
         }
     }
 </script>
 
 <style scoped>
-    @keyframes loading{
+    @keyframes spin {
         0% {transform: rotate(0);}
         100% {transform: rotate(360deg);}
     }
-    .loading{
-        animation: loading 1s infinite linear;
+    .spin{
+        animation: spin 1.2s infinite linear;
     }
 
     .m-button{

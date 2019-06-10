@@ -7,12 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Monent-s-Garden</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
+        * {padding: 0;margin: 0;box-sizing: border-box;}
+        #app {margin: 20px;}
+        body {font-size: var(--font-size);background-color: #131213;}
         :root {
             --button-height: 36px;
             --font-size: 14px;
@@ -23,34 +20,24 @@
             --button-bg-hover: #507BD8;
             --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.3);
         }
-
-        #app {
-            margin: 20px;
-        }
-
-        body {
-            font-size: var(--font-size);
-            background-color: #131213;
-        }
     </style>
-
 </head>
 
 
 <body>
 <div id="app">
-    <m-button>
+    <m-button :loading="loading1" @change="loading1=!loading1">
         默认样式
     </m-button>
-    <m-button icon="smile" where-icon="left">
+    <m-button icon="carps"  where-icon="left">
         默认样式
     </m-button>
-    <m-button icon="smile" where-icon="right">
+    <m-button icon="smile" :loading="loading3" @change="loading3=!loading3" where-icon="right">
         默认样式
     </m-button>
 
-    <m-icon name="carps"></m-icon>
-    <m-icon name="Loading"></m-icon>
+    <m-icon icon="carps"></m-icon>
+    <m-icon icon="loading"></m-icon>
 
     <!--<svg class="m-icon">-->
     <!--<use xlink:href="#m-carps"></use>-->
@@ -59,6 +46,6 @@
 </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1233285_xgvvbvaadl.js"></script>
+<script src="//at.alicdn.com/t/font_1233285_of6tqt7sq2.js"></script>
 </body>
 </html>
