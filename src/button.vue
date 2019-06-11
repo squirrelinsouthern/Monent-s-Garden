@@ -24,11 +24,6 @@
                     return value === 'left' || value === 'right'
                 }
             }
-        },
-        methods:{
-            x(){
-                this.$emit('click')
-            }
         }
     }
 </script>
@@ -49,17 +44,17 @@
         color: var(--button-color-font);
         border-radius: var(--border-radius);
         background-color: var(--button-bg);
-        border: 1px solid transparent;
+        border: 1px solid #2d6bb4;
         cursor: pointer;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        margin-right: 8px;
         transition-duration: 0.4s;
     }
     .m-button:hover{
          box-shadow: var(--button-shadow);
+         background: var(--button-bg-hover);
      }
     .m-button:active{
          background:var(--button-bg-active);

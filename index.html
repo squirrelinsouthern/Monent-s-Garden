@@ -9,7 +9,7 @@
     <style>
         * {padding: 0;margin: 0;box-sizing: border-box;}
         #app {margin: 20px;}
-        body {font-size: var(--font-size);background-color: #131213;}
+        body {font-size: var(--font-size);background-color: #cbcacb;}
         :root {
             --button-height: 36px;
             --font-size: 14px;
@@ -17,8 +17,8 @@
             --button-color-font: white;
             --button-bg: #5C8DF6;
             --button-bg-active: #507BD8;
-            --button-bg-hover: #507BD8;
-            --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.3);
+            --button-bg-hover: #75a0ff;
+            --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);
         }
     </style>
 </head>
@@ -43,9 +43,14 @@
     <!--<use xlink:href="#m-carps"></use>-->
     <!--</svg>-->
 
+    <m-button-group>
+        <m-button icon="last">上一页</m-button>
+        <m-button>更多</m-button>
+        <m-button icon="next" where-icon="right">下一页</m-button>
+    </m-button-group>
 </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1233285_of6tqt7sq2.js"></script>
+<script src="//at.alicdn.com/t/font_1233285_34uwzv559wr.js"></script>
 </body>
 </html>
