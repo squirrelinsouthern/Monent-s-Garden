@@ -16,8 +16,6 @@ new Vue({
     }
 });
 
-
-
 //单元测试
 //querySelector返回第一个DOM元素
 //getAttribute获取元素属性值
