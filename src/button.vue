@@ -9,6 +9,10 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+    import Icon from './icon'
+    Vue.component('m-icon',Icon)
+
     export default {
         // props:['icon','whereIcon']
         props:{
