@@ -20,34 +20,57 @@
             --button-bg-hover: #75a0ff;
             --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);
         }
+        .box{padding: 20px 0}
     </style>
 </head>
 
 
 <body>
 <div id="app">
-    <m-button :loading="loading1" @change="loading1=!loading1">
-        默认样式
-    </m-button>
-    <m-button icon="aixin"  where-icon="left">
-        默认样式
-    </m-button>
-    <m-button icon="smile" :loading="loading3" @change="loading3=!loading3" where-icon="right">
-        默认样式
-    </m-button>
+    <div class="box">
+        <m-input content="莫奈的花园" ></m-input>
+        <m-input content="不可更改" :nochange="true"></m-input>
+        <m-input content="不可输入" :stopuse="true"></m-input>
+    </div>
+    <div class="box">
+        <m-input content="莫奈" error="只能输入数字"></m-input>
+    </div>
 
-    <!--<m-icon icon="carps"></m-icon>-->
-    <!--<m-icon icon="loading"></m-icon>-->
 
-    <!--<svg class="m-icon">-->
-    <!--<use xlink:href="#m-carps"></use>-->
-    <!--</svg>-->
-    <div id="test"></div>
-    <m-button-group>
-        <m-button icon="last">上一页</m-button>
-        <m-button>更多</m-button>
-        <m-button icon="next" where-icon="right">下一页</m-button>
-    </m-button-group>
+    <br>
+    <br>
+
+    <div class="box">
+        <m-button :loading="loading1" @change="loading1=!loading1">
+            默认样式
+        </m-button>
+        <m-button icon="aixin"  where-icon="left">
+            默认样式
+        </m-button>
+        <m-button icon="smile" :loading="loading3" @change="loading3=!loading3" where-icon="right">
+            默认样式
+        </m-button>
+    </div>
+        <!--<m-icon icon="carps"></m-icon>-->
+        <!--<m-icon icon="loading"></m-icon>-->
+
+        <!--<svg class="m-icon">-->
+        <!--<use xlink:href="#m-carps"></use>-->
+        <!--</svg>-->
+    <div class="box">
+        <div id="test"></div>
+        <m-button-group>
+            <m-button icon="last">上一页</m-button>
+            <m-button>更多</m-button>
+            <m-button icon="next" where-icon="right">下一页</m-button>
+        </m-button-group>
+    </div>
+
+
+
+
+
+
 </div>
 
 <script src="./src/app.js"></script>

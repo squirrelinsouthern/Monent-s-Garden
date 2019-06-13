@@ -15,7 +15,7 @@
     }
 </script>
 
-<style lang="less" scoped type="text/less">
+<style lang="scss" scoped type="text/scss">
     .m-button-group {
         display: inline-flex;
         vertical-align: top;
