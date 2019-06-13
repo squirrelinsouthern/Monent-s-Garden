@@ -1,5 +1,5 @@
 <template>
-    <button class="m-button" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('change')">
+    <button class="m-button hello" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('change')">
         <m-icon class="icon" v-if="icon && !loading" :icon="icon" ></m-icon>
         <m-icon class="icon spin" v-if="loading" icon="loading" ></m-icon>
         <div class="content">
