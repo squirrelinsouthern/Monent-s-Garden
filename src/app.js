@@ -14,7 +14,8 @@ new Vue({
     data:{
         loading1:false,
         loading2:true,
-        loading3:true
+        loading3:true,
+        message:'你可以输入改变我'
     },
     //验证是否触发change的callback函数（是否能收到ee对象）
     //html上只留一个input

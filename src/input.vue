@@ -2,10 +2,10 @@
     <div class="wrapper" >
         <input type="text" :placeholder="placeholder"  :disabled="stopUse" :readonly="noChange"
                :class="{error}"
-               @change="$emit('change',$event)"
-               @blur="$emit('blur',$event)"
-               @input="$emit('input',$event)"
-               @focus="$emit('focus',$event)">
+               @change="$emit('change',$event.target.value)"
+               @blur="$emit('blur',$event.target.value)"
+               @input="$emit('input',$event.target.value)"
+               @focus="$emit('focus',$event.target.value)">
         <div class="tishi" v-if="error">
             <m-icon icon="tishi"></m-icon>
             <span class="errorMessage">{{error}}</span>
