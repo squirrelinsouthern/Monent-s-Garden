@@ -59,6 +59,7 @@ describe('Input', () => {
             expect(errorMessage.innerText).to.equal('你错了')
         })
     })
+
     describe('事件', () => {
         const Constructor = Vue.extend(Input)
         let vm
@@ -71,16 +72,17 @@ describe('Input', () => {
                     vm = new Constructor({}).$mount()
                     const callback = sinon.fake();
                     vm.$on(eventName, callback)
-                    //触发input的change 事件
+         //触发input的change 事件 这个event是人工的
                     let event = new Event(eventName);
-                    Object.defineProperty(
-                        event, 'target', {
-                            value: {value: 'hi'}, enumerable: true
-                        }
-                    )
+                        // Object.defineProperty(
+                        //     event, 'target', {
+                        //         value: {value: 'hi'}, enumerable: true
+                        //     }
+                        // )
                     let inputElement = vm.$el.querySelector('input')
                     inputElement.dispatchEvent(event)
-                    expect(callback).to.have.been.calledWith('hi')
+                    expect(callback).to.have.been.calledWith(event)
+                    //callback里有个参数应该是event？！
                 })
         })
     })

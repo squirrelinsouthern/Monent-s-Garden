@@ -1,7 +1,11 @@
 <template>
     <div class="wrapper" >
         <input type="text" :placeholder="placeholder"  :disabled="stopUse" :readonly="noChange"
-               :class="{error}">
+               :class="{error}"
+               @change="$emit('change',$event)"
+               @blur="$emit('blur',$event)"
+               @input="$emit('input',$event)"
+               @focus="$emit('focus',$event)">
         <div class="tishi" v-if="error">
             <m-icon icon="tishi"></m-icon>
             <span class="errorMessage">{{error}}</span>

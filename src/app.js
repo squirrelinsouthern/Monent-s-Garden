@@ -15,6 +15,21 @@ new Vue({
         loading1:false,
         loading2:true,
         loading3:true
+    },
+    //验证是否触发change的callback函数（是否能收到ee对象）
+    //html上只留一个input
+    created(){
+        setTimeout(()=>{
+            let event = new Event('change');
+            let inputElement = this.$el.querySelector('input')
+            inputElement.dispatchEvent(event)
+            console.log('hi')
+        },2000)
+    },
+    methods:{
+        inputChange(ee){
+            console.log(ee)
+        }
     }
 
 });

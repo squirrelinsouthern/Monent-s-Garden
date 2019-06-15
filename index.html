@@ -27,15 +27,17 @@
 
 <body>
 <div id="app">
+    <!--<div class="box">-->
+        <!--<m-input placeholder="haha"></m-input>-->
+        <!--<m-input placeholder="不可更改" :no-change="true"></m-input>-->
+        <!--<m-input placeholder="禁止输入" :stop-use="true"></m-input>-->
+    <!--</div>-->
+    <!--<div class="box">-->
+        <!--<m-input placeholder="" error="输入不正确"></m-input>-->
+    <!--</div>-->
     <div class="box">
-        <m-input placeholder="haha"></m-input>
-        <m-input placeholder="不可更改" :no-change="true"></m-input>
-        <m-input placeholder="禁止输入" :stop-use="true"></m-input>
+        <m-input placeholder="change事件" @change="inputChange"></m-input>
     </div>
-    <div class="box">
-        <m-input placeholder="" error="输入不正确"></m-input>
-    </div>
-
     <!--@blur="inputBlur"-->
     <!--@input="inputInput"-->
     <!--@focus="inputFocus"-->
