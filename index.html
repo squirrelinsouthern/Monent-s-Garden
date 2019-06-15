@@ -28,14 +28,17 @@
 <body>
 <div id="app">
     <div class="box">
-        <m-input content="莫奈的花园" ></m-input>
-        <m-input content="不可更改" :nochange="true"></m-input>
-        <m-input content="不可输入" :stopuse="true"></m-input>
+        <m-input placeholder="haha"></m-input>
+        <m-input placeholder="不可更改" :no-change="true"></m-input>
+        <m-input placeholder="禁止输入" :stop-use="true"></m-input>
     </div>
     <div class="box">
-        <m-input content="莫奈" error="只能输入数字"></m-input>
+        <m-input placeholder="" error="输入不正确"></m-input>
     </div>
 
+    <!--@blur="inputBlur"-->
+    <!--@input="inputInput"-->
+    <!--@focus="inputFocus"-->
 
     <br>
     <br>
@@ -74,6 +77,6 @@
 </div>
 
 <script src="./src/app.js"></script>
-<!--<script src="./src/svg.js"></script>-->
+<script src="./src/svg.js"></script>
 </body>
 </html>

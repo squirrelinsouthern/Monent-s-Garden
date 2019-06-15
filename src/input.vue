@@ -1,29 +1,29 @@
 <template>
     <div class="wrapper" >
-        <input type="text" :value="content" :disabled="stopuse" :readonly="nochange"
-               :class="{error:error}">
-        <box class="tishi" v-if="error">
+        <input type="text" :placeholder="placeholder"  :disabled="stopUse" :readonly="noChange"
+               :class="{error}">
+        <div class="tishi" v-if="error">
             <m-icon icon="tishi"></m-icon>
-            <span>{{error}}</span>
-        </box>
+            <span class="errorMessage">{{error}}</span>
+        </div>
     </div>
 </template>
 
 <script>
     import Vue from 'vue'
     import Icon from './icon'
-    Vue.component('m-icon',Icon)
+    Vue.component('m-icon',Icon);
 
     export default {
         props:{
-            content:{
+            placeholder:{
                 type:String
             },
-            stopuse:{
+            stopUse:{
                type:Boolean,
                 default:false
             },
-            nochange:{
+            noChange:{
                 type:Boolean,
                 default:false
             },
@@ -31,25 +31,18 @@
                 type:String
             }
         }
-
     }
 </script>
 
 <style lang="scss" scoped type="text/scss">
-    /*--button-height: 36px;*/
-    /*--font-size: 14px;*/
-    /*--border-radius: 4px;*/
-    /*--button-color-font: white;*/
-    /*--button-bg: #5C8DF6;*/
-    /*--button-bg-active: #507BD8;*/
-    /*--button-bg-hover: #75a0ff;*/
-    /*--button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);*/
     $height:32px;
     $border-color:#75a0ff;
     $font-size:14px;
 
+
 .wrapper{
     display: inline-block;
+    ::placeholder{color: #b1d3ff;}
     >input{
         height: 32px;
         border: 1px solid $border-color;
@@ -58,6 +51,7 @@
         padding: 0 12px;
         font-size: $font-size;
         color: #2d6bb4;
+
         &:hover{
             border-color: #2d6bb4;
         }
@@ -79,12 +73,21 @@
     .error{
         border-color: #cc3b62;
         color:#cc3b62;
+        &:hover{
+            border-color: #cc3b62;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: 2px 2px 4px rgba(204,59,98, 0.3);
+        }
+
     }
+
     .tishi{
         display: block;
         padding-top: 2px;
-        .m-icon{fill:#cc3b62;vertical-align: middle;}
-        span{color:#cc3b62;vertical-align: middle;}
+        .m-icon{fill:#cc3b62;width:12px;vertical-align: middle;}
+        .errorMessage{color:#cc3b62;vertical-align: middle;}
     }
 
 

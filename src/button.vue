@@ -9,12 +9,9 @@
 </template>
 
 <script>
-    import Vue from 'vue'
     import Icon from './icon'
-    Vue.component('m-icon',Icon)
-
     export default {
-        // props:['icon','whereIcon']
+        components:{'m-icon':Icon},
         props:{
             icon:{},
             loading:{

@@ -14,9 +14,9 @@ new Vue({
     data:{
         loading1:false,
         loading2:true,
-        loading3:true,
-        content:'莫奈花园'
+        loading3:true
     }
+
 });
 
 
