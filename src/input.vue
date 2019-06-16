@@ -19,6 +19,7 @@
     Vue.component('m-icon',Icon);
 
     export default {
+        name:"Mo-input",
         props:{
             placeholder:{
                 type:String

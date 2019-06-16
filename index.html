@@ -24,9 +24,40 @@
     </style>
 </head>
 
-
 <body>
-<div id="app">
+<div id="app" style="border: 1px solid #59b40c">
+    <m-row>
+        <m-col :span="5">4</m-col>
+        <m-col :span="15" :offset="4">20</m-col>
+    </m-row>
+    <m-row :gutter="20">
+        <m-col>6</m-col>
+        <m-col>6</m-col>
+        <m-col>6</m-col>
+    </m-row>
+    <m-row>
+        <m-col>1</m-col>
+        <m-col>2</m-col>
+        <m-col>3</m-col>
+        <m-col>4</m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="2">4</m-col>
+        <m-col :span="20" :offset="2">20</m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="8">8</m-col>
+        <m-col :span="14" :offset="2">14</m-col>
+    </m-row>
+
+
+
+
+
+    <br>
+    <br>
+
+
     <div class="box">
         <m-input placeholder="请在此输入"></m-input>
         <m-input placeholder="不可更改" :no-change="true"></m-input>

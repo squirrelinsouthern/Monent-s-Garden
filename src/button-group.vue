@@ -6,6 +6,7 @@
 
 <script>
     export default {
+        name:"Mo-buttonGroup",
         mounted (){
             for(let i of this.$el.children)
             if( i.nodeName !== 'BUTTON'){

@@ -2,12 +2,17 @@ import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
+import Row from './row'
+import Col from './col'
 import Input from './input'
+
 
 Vue.component('m-button', Button);
 Vue.component('m-icon', Icon);
 Vue.component('m-button-group', ButtonGroup);
 Vue.component('m-input',Input);
+Vue.component('m-col',Col);
+Vue.component('m-row',Row);
 
 new Vue({
     el:'#app',
@@ -19,14 +24,14 @@ new Vue({
     },
     //验证是否触发change的callback函数（是否能收到ee对象）
     //html上只留一个input
-    created(){
-        setTimeout(()=>{
-            let event = new Event('change');
-            let inputElement = this.$el.querySelector('input')
-            inputElement.dispatchEvent(event)
-            console.log('hi')
-        },2000)
-    },
+    // created(){
+    //     setTimeout(()=>{
+    //         let event = new Event('change');
+    //         let inputElement = this.$el.querySelector('input')
+    //         inputElement.dispatchEvent(event)
+    //         console.log('hi')
+    //     },2000)
+    // },
     methods:{
         inputChange(ee){
             console.log(ee)
