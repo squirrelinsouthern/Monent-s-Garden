@@ -1,7 +1,6 @@
 <template>
-    <div class="col" :class="[span &&`col-${span}`,offset &&`offset-${offset}`]"
-         :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}">
-        <div style="border: 1px solid #2d6bb4">
+    <div class="col" :class="colClass" :style="colStyle">
+        <div style="border: 1px solid white;background-color: #75a0ff;">
             <slot></slot>
         </div>
     </div>
@@ -20,19 +19,35 @@ export default {
     },
     data(){
         return{
-            gutter:0
+            gutter:""
+            // :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}"改写
+            // data只在created的时候取一次值
+            // colStyle:{
+            //     paddingLeft:this.gutter/2+'px',
+            //         paddingRight:this.gutter/2+'px'
+            // }
         }
     },
-    created(){ console.log(3)},
-    mounted(){ console.log(4)}
+    computed:{
+        colStyle(){
+            return{
+                paddingLeft: this.gutter / 2 + 'px',
+                paddingRight: this.gutter / 2+ 'px',
+            }
+        },
+        colClass(){
+            let {span,offset}=this
+            return [span &&`col-${span}`,offset &&`offset-${offset}`]
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss" type="text/scss">
     .col{
-        background-color: #d8ecff;
+        /*background-color: #d8ecff;*/
         width: 50%;
-        height: 40px;
+        height: 30px;
     }
     $class: col-;
     @for $n from 1 through 24 {
