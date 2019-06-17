@@ -15,6 +15,19 @@ export default {
         },
         offset:{
             type:Number
+        },
+        phone:{
+            type:Object,
+            validator(obj){
+                let keys = Object.keys(obj)
+                let valid = true
+                keys.forEach((key)=>{
+                    if(!['span','offset'].includes(key)){
+                        valid = false
+                    }
+                })
+             return valid
+            }
         }
     },
     data(){
@@ -36,7 +49,7 @@ export default {
             }
         },
         colClass(){
-            let {span,offset}=this
+            let {span, offset} = this
             return [span &&`col-${span}`,offset &&`offset-${offset}`]
         }
     }
@@ -62,6 +75,7 @@ export default {
 
         }
     }
+    
 
 
 </style>
