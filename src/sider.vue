@@ -12,6 +12,6 @@
 
 <style lang="scss" scoped type="text/scss">
     .sider{
-        background-color: #1c2a48;
+        background-color: #ff6768;
     }
 </style>

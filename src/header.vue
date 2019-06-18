@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped type="text/scss">
     .header{
-        background-color: #6295ff;
+        background-color: #17223b;
         height: 80px;
     }
 </style>

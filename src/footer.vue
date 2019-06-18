@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped type="text/scss">
   .footer{
-      background-color: #75a0ff;
+      background-color: #17223b;
       height: 80px;
   }
 </style>

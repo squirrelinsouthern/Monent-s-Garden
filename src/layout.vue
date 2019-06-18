@@ -27,7 +27,6 @@
 <style lang="scss" scoped type="text/scss">
     .layout{
         flex-grow: 1;
-        border: 1px solid orangered;
         display: flex;
         flex-direction: column;
     }

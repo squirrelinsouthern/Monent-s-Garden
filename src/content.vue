@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped type="text/scss">
     .content{
-        background-color: #d8ecff;
+        background-color: #6b778d;
         flex-grow:1;
         height: 100%;
     }
