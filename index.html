@@ -8,7 +8,7 @@
     <title>Monent-s-Garden</title>
     <style>
         * {padding: 0;margin: 0;box-sizing: border-box;}
-        #app {margin: 20px;}
+        /*#app {margin: 20px;}*/
         body {font-size: var(--font-size);background-color: #cbcacb;}
         :root {
             --button-height: 36px;
@@ -25,72 +25,79 @@
 </head>
 
 <body>
-<div id="app" style="border: 1px solid #59b40c">
-    <m-row>
-        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
-            <div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>
-        </m-col>
-        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
-            <div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>
-        </m-col>
-        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
-            <div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>
-        </m-col>
-        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
-            <div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>
-        </m-col>
-    </m-row>
+<div id="app">
 
-    <br>
-    <br>
+    <m-layout style="height: 100vh;">
+        <m-sider>sider</m-sider>
+            <m-layout >
+                <m-header>header</m-header>
+                <m-content>content</m-content>
+                <m-footer>footer</m-footer>
+            </m-layout>
 
-    <div class="box">
-        <m-input placeholder="请在此输入"></m-input>
-        <m-input placeholder="不可更改" :no-change="true"></m-input>
-        <m-input placeholder="禁止输入" :stop-use="true"></m-input>
-    </div>
-    <div class="box">
-        <m-input placeholder="检测" error="输入不正确"></m-input>
-    </div>
-    <div class="box">
-        <m-input placeholder="change事件" @input="inputChange"></m-input>
-        <m-input placeholder="你可以输入改变我" v-model="message"></m-input>
-        <span>{{message}}</span>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="box">
-        <m-button :loading="loading1" @change="loading1=!loading1">
-            默认样式
-        </m-button>
-        <m-button icon="aixin"  where-icon="left">
-            默认样式
-        </m-button>
-        <m-button icon="smile" :loading="loading3" @change="loading3=!loading3" where-icon="right">
-            默认样式
-        </m-button>
-    </div>
-        <!--<m-icon icon="carps"></m-icon>-->
-        <!--<m-icon icon="loading"></m-icon>-->
-
-        <!--<svg class="m-icon">-->
-        <!--<use xlink:href="#m-carps"></use>-->
-        <!--</svg>-->
-    <div class="box">
-        <div id="test"></div>
-        <m-button-group>
-            <m-button icon="last">上一页</m-button>
-            <m-button>更多</m-button>
-            <m-button icon="next" where-icon="right">下一页</m-button>
-        </m-button-group>
-    </div>
+    </m-layout>
 
 
+    <!--<m-row :gutter="10">-->
+        <!--<m-col :span="24" :ipad="{span:12,offset:1}" :narrow-pc="{span:8}">-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+        <!--</m-col>-->
+        <!--<m-col :span="24" :ipad="{span:11}" :narrow-pc="{span:8}">-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+        <!--</m-col>-->
+        <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+        <!--</m-col>-->
+        <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+        <!--</m-col>-->
+    <!--</m-row>-->
 
+    <!--<br>-->
+    <!--<br>-->
 
+    <!--<div class="box">-->
+        <!--<m-input placeholder="请在此输入"></m-input>-->
+        <!--<m-input placeholder="不可更改" :no-change="true"></m-input>-->
+        <!--<m-input placeholder="禁止输入" :stop-use="true"></m-input>-->
+    <!--</div>-->
+    <!--<div class="box">-->
+        <!--<m-input placeholder="检测" error="输入不正确"></m-input>-->
+    <!--</div>-->
+    <!--<div class="box">-->
+        <!--<m-input placeholder="change事件" @input="inputChange"></m-input>-->
+        <!--<m-input placeholder="你可以输入改变我" v-model="message"></m-input>-->
+        <!--<span>{{message}}</span>-->
+    <!--</div>-->
 
+    <!--<br>-->
+    <!--<br>-->
+
+    <!--<div class="box">-->
+        <!--<m-button :loading="loading1" @change="loading1=!loading1">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+        <!--<m-button icon="aixin"  where-icon="left">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+        <!--<m-button icon="smile" :loading="loading3" @change="loading3=!loading3" where-icon="right">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+    <!--</div>-->
+        <!--&lt;!&ndash;<m-icon icon="carps"></m-icon>&ndash;&gt;-->
+        <!--&lt;!&ndash;<m-icon icon="loading"></m-icon>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<svg class="m-icon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<use xlink:href="#m-carps"></use>&ndash;&gt;-->
+        <!--&lt;!&ndash;</svg>&ndash;&gt;-->
+    <!--<div class="box">-->
+        <!--<div id="test"></div>-->
+        <!--<m-button-group>-->
+            <!--<m-button icon="last">上一页</m-button>-->
+            <!--<m-button>更多</m-button>-->
+            <!--<m-button icon="next" where-icon="right">下一页</m-button>-->
+        <!--</m-button-group>-->
+    <!--</div>-->
 
 </div>
 

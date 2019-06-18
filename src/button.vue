@@ -11,7 +11,7 @@
 <script>
     import Icon from './icon'
     export default {
-        name:"Mo-button",
+        name:"MoButton",
         components:{'m-icon':Icon},
         props:{
             icon:{},
