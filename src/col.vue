@@ -1,8 +1,8 @@
 <template>
     <div class="col" :class="colClass" :style="colStyle">
-        <div style="border: 1px solid white;background-color: #75a0ff;">
+        <!--<div style="border: 1px solid white;background-color: #75a0ff;">-->
             <slot></slot>
-        </div>
+        <!--</div>-->
     </div>
 </template>
 
@@ -92,8 +92,8 @@ export default {
 <style scoped lang="scss" type="text/scss">
     .col{
         width: 50%;
-        height: 30px;
     }
+    //默认的手机样式
     $class: col-;
     @for $n from 1 through 24 {
         .#{$class}#{$n} {
@@ -107,22 +107,8 @@ export default {
 
         }
     }
-
-    @media (max-width:576px) {
-        $class: col-phone-;
-        @for $n from 1 through 24 {
-            .#{$class}#{$n} {
-                width: ( $n / 24 ) * 100%;
-            }
-        }
-        $class: offset-phone-;
-        @for $n from 1 through 24 {
-            .#{$class}#{$n} {
-                width: ( $n / 24 ) * 100%;
-            }
-        }
-    }
-    @media (min-width:577px) and (max-width:768px){
+    //iPad样式
+    @media (min-width:577px){
         $class: col-ipad-;
         @for $n from 1 through 24 {
             .#{$class}#{$n} {
@@ -136,21 +122,23 @@ export default {
             }
         }
     }
-    @media (min-width:769px) and (max-width:992px){
-        $class: col-narrow-pc-;
+    //narrow-pc样式
+    @media (min-width:769px){
+        $class: col-narrowPc-;
         @for $n from 1 through 24 {
             .#{$class}#{$n} {
                 width: ( $n / 24 ) * 100%;
             }
         }
-        $class: offset-narrow-pc-;
+        $class: offset-narrowPc-;
         @for $n from 1 through 24 {
             .#{$class}#{$n} {
                 width: ( $n / 24 ) * 100%;
             }
         }
     }
-    @media (min-width:993px) and (max-width:1200px){
+    //pc样式
+    @media (min-width:993px){
         $class: col-pc-;
         @for $n from 1 through 24 {
             .#{$class}#{$n} {
@@ -164,6 +152,7 @@ export default {
             }
         }
     }
+    //wide-pc样式
     @media (min-width:1201px) {
         $class: col-wide-pc-;
         @for $n from 1 through 24 {

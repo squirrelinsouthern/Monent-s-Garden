@@ -30,5 +30,6 @@
 <style scoped lang="scss" type="text/scss">
     .row{
         display: flex;
+        flex-wrap: wrap;
     }
 </style>
