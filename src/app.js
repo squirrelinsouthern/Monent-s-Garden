@@ -10,8 +10,10 @@ import Footer from './footer'
 import Header from './header'
 import Sider from './sider'
 import Content from './content'
+import Toast from './toast'
+import Plugin from './plugin'
 
-
+Vue.use(Plugin)
 Vue.component('m-button', Button);
 Vue.component('m-icon', Icon);
 Vue.component('m-button-group', ButtonGroup);
@@ -23,6 +25,7 @@ Vue.component('m-header',Header);
 Vue.component('m-sider',Sider);
 Vue.component('m-content',Content);
 Vue.component('m-footer',Footer);
+Vue.component('m-toast',Toast);
 
 new Vue({
     el:'#app',
@@ -45,7 +48,13 @@ new Vue({
     methods:{
         inputChange(ee){
             console.log(ee)
+        },
+        sendMessage(){
+            this.$toast('您收到一条消息')
         }
+    },
+    created(){
+
     }
 
 });

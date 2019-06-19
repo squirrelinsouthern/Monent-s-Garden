@@ -27,11 +27,14 @@
 <body>
 <div id="app">
 
+
     <m-layout style="height: 100vh;">
         <m-sider>sider</m-sider>
             <m-layout >
                 <m-header>header</m-header>
-                <m-content>content</m-content>
+                <m-content>
+                    <button @click="sendMessage" style="border: 1px solid gray">点我</button>
+                </m-content>
                 <m-footer>footer</m-footer>
             </m-layout>
 
