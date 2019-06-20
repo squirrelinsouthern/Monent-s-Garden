@@ -1,7 +1,9 @@
 <template>
     <div class="toast">
         <!--<div v-html="$slots.default[0]"></div>-->
-        <slot></slot>
+        <div class="slot">
+            <slot></slot>
+        </div>
         <span class="close" v-if="closeButton" @click="onClose">
             {{closeButton.text}}
         </span>
@@ -13,7 +15,7 @@
         name:"MoToast",
         props:{
             autoClose:{type:Boolean,default:true},
-            autoTime:{type:Number, default:10},
+            autoTime:{type:Number, default:1000000},
             closeButton:{
                 type:Object,
                 default(){
@@ -51,28 +53,32 @@
     .toast{
         border-radius: 4px;
         background-color: rgba(23,34,59,0.7);
-        color: white;
+        color: #d8ecff;
+        display: flex;
+        align-items: center;
         position: fixed;
+        justify-content:space-between;
         top:0;
         left:50%;
         transform: translateX(-50%);
         transition-duration: 2s;
-        white-space:nowrap;
-        padding: 8px 20px;
-        font-size:15px;
+        width: 94%;
+        padding: 12px 12px;
+        font-size:14px;
         margin-top: 8px;
+        & .slot{
+            /*border-right:1px solid white;*/
+            margin-right: -4px;
+        }
         & span{
             color: #ff6768;
         }
         & .close{
-            &:before{
-                content: '';
-                border:1px solid transparent;
-                height:90px;
-                padding-left: 12px;
-            }
-
-
+            flex-shrink: 0;
+            display: inline;
+            padding-left: 16px;
+            /*border:1px solid greenyellow;*/
+            height:100%;
         }
     }
 </style>

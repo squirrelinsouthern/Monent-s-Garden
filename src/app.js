@@ -50,7 +50,7 @@ new Vue({
             console.log(ee)
         },
         sendMessage(){
-            this.$toast('您收到一条消息',{})
+            this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到一条消息您收到一条消息您收到一条消息',{})
         }
     },
     created(){
