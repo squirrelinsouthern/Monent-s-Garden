@@ -5,6 +5,7 @@ export default {
             let Comp = Vue.extend(Toast)
             let toast = new Comp ({
                 propsData:{
+                    position:'middle',
                     closeButton:{
                         text:'知道了',
                         callback(){

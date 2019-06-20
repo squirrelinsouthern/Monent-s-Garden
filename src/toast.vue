@@ -1,5 +1,5 @@
 <template>
-    <div class="toast">
+    <div class="toast" :class="buttonClass">
         <!--<div v-html="$slots.default[0]"></div>-->
         <div class="slot">
             <slot></slot>
@@ -26,6 +26,13 @@
                         }
                     }
                 }
+            },
+            position:{
+                type:String,
+                default:'top',
+                validate(where){
+                    return ['top','middle','bottom'].indexOf(where)>=0
+                }
             }
         },
         mounted(){
@@ -33,6 +40,14 @@
                 setTimeout(()=>{
                     this.setTimeClose()
                 }, this.autoTime * 1000)
+            }
+        },
+        computed:{
+            buttonClass(){
+                return {
+                    [`position-${this.position}`]:true
+                }
+
             }
         },
         methods: {
@@ -56,16 +71,11 @@
         color: #d8ecff;
         display: flex;
         align-items: center;
-        position: fixed;
-        justify-content:space-between;
-        top:0;
-        left:50%;
-        transform: translateX(-50%);
+        position: absolute;
         transition-duration: 2s;
         width: 94%;
-        padding: 12px 12px;
+        padding: 12px 16px;
         font-size:14px;
-        margin-top: 8px;
         & .slot{
             /*border-right:1px solid white;*/
             margin-right: -4px;
@@ -80,5 +90,22 @@
             /*border:1px solid greenyellow;*/
             height:100%;
         }
+        &.position-top{
+            top:12px;
+            transform: translateX(-50%);
+            left:50%;
+        }
+        &.position-bottom{
+            bottom: 12px;
+            transform: translateX(-50%);
+            left:50%;
+        }
+        &.position-middle{
+            transform: translate(-50%, -50%);
+            top:50%;
+            left:50%;
+        }
+
     }
+
 </style>
