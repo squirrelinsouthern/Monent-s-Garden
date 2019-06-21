@@ -46,16 +46,16 @@ new Vue({
     //     },2000)
     // },
     created(){
-        this.$toast('<p>段落<strong>hi</strong><a href="www.qq.com">a</a></p>',{
-            position:'middle',
-            enableHTML:true,
-            closeButton:{
-                text:'知道了',
-                callback(){
-                    console.log('okokokok')
-                }
-            }
-        })
+        // this.$toast('<p>段落<strong>hi</strong><a href="www.qq.com">a</a></p>',{
+        //     position:'middle',
+        //     enableHTML:true,
+        //     closeButton:{
+        //         text:'知道了',
+        //         callback(){
+        //             console.log('okokokok')
+        //         }
+        //     }
+        // })
     },
     methods:{
         inputChange(ee){
@@ -63,6 +63,8 @@ new Vue({
         },
         sendMessage() {
             this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到', {
+                position:'bottom',
+                autoTime:100,
                 closeButton:{
                     text:'知道了2',
                     callback(toast){
