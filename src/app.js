@@ -61,9 +61,10 @@ new Vue({
         inputChange(ee){
             console.log(ee)
         },
-        sendMessage() {
+
+        sendMessage(position) {
             this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到', {
-                position:'bottom',
+                position:position,
                 autoTime:100,
                 closeButton:{
                     text:'知道了2',
@@ -73,6 +74,15 @@ new Vue({
                     }
                 }
             })
+        },
+        sendMessage1(){
+            this.sendMessage('top')
+        },
+        sendMessage2(){
+            this.sendMessage('middle')
+        },
+        sendMessage3(){
+            this.sendMessage('bottom')
         }
     }
 

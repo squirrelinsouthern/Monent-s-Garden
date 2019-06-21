@@ -1,13 +1,16 @@
 <template>
-    <div class="toast" :class="buttonClass">
-        <div class="slot"  v-if="!enableHTML">
-            <slot ></slot>
-        </div>
-        <div v-html="$slots.default[0]" v-else></div>
-        <span class="close" v-if="closeButton" @click="onClickClose">
+    <div class="wrapper" :class="buttonClass">
+        <div class="toast" >
+            <div class="slot"  v-if="!enableHTML">
+                <slot ></slot>
+            </div>
+            <div v-html="$slots.default[0]" v-else></div>
+            <span class="close" v-if="closeButton" @click="onClickClose">
             {{closeButton.text}}
-        </span>
+            </span>
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -67,6 +70,41 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
+    @keyframes slide-up {
+        0% {opacity: 0; transform:translateY(100%)}
+        100% {opacity: 1; transform:translateY(0%);}
+    }
+    @keyframes slide-down {
+        0% {opacity: 0; transform:translateY(-100%);}
+        100% {opacity: 1; transform:translateY(0%)}
+    }
+
+    .wrapper{
+        position: absolute;
+        width: 94%;
+        transform: translateX(-50%);
+        left:50%;
+        &.position-top{
+            top:0px;
+            .toast{
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                animation: slide-down 0.3s;
+            }
+        }
+        &.position-bottom{
+            bottom: 0px;
+            .toast{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        &.position-middle{
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
     .toast{
         border-radius: 4px;
         background-color: rgba(23,34,59,0.7);
@@ -74,13 +112,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: absolute;
-        transition-duration: 2s;
-        /*width: 94%;*/
         padding: 12px 16px;
         font-size:14px;
+        animation: slide-up 0.3s;
+        animation-timing-function: ease-in;
         & .slot{
-            /*border-right:1px solid white;*/
             margin-right: -4px;
         }
         & span{
@@ -90,25 +126,11 @@
             flex-shrink: 0;
             display: inline;
             padding-left: 16px;
-            /*border:1px solid greenyellow;*/
             height:100%;
         }
-        &.position-top{
-            top:12px;
-            transform: translateX(-50%);
-            left:50%;
-        }
-        &.position-bottom{
-            bottom: 12px;
-            transform: translateX(-50%);
-            left:50%;
-        }
-        &.position-middle{
-            transform: translate(-50%, -50%);
-            top:50%;
-            left:50%;
-        }
-
     }
+
+
+
 
 </style>
