@@ -45,17 +45,35 @@ new Vue({
     //         console.log('hi')
     //     },2000)
     // },
+    created(){
+        this.$toast('<p>段落<strong>hi</strong><a href="www.qq.com">a</a></p>',{
+            position:'middle',
+            enableHTML:true,
+            closeButton:{
+                text:'知道了',
+                callback(){
+                    console.log('okokokok')
+                }
+            }
+        })
+    },
     methods:{
         inputChange(ee){
             console.log(ee)
         },
-        sendMessage(){
-            this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到一条消息您收到一条消息您收到一条消息',{})
+        sendMessage() {
+            this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到', {
+                closeButton:{
+                    text:'知道了2',
+                    callback(toast){
+                        toast.log() //callback是可以接受toast回传来的功能
+                        console.log('2222okokokok')
+                    }
+                }
+            })
         }
-    },
-    created(){
-
     }
+
 
 });
 

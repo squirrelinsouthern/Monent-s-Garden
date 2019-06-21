@@ -1,10 +1,10 @@
 <template>
     <div class="toast" :class="buttonClass">
-        <!--<div v-html="$slots.default[0]"></div>-->
-        <div class="slot">
-            <slot></slot>
+        <div class="slot"  v-if="!enableHTML">
+            <slot ></slot>
         </div>
-        <span class="close" v-if="closeButton" @click="onClose">
+        <div v-html="$slots.default[0]" v-else></div>
+        <span class="close" v-if="closeButton" @click="onClickClose">
             {{closeButton.text}}
         </span>
     </div>
@@ -15,23 +15,20 @@
         name:"MoToast",
         props:{
             autoClose:{type:Boolean,default:true},
-            autoTime:{type:Number, default:1000000},
-            closeButton:{
-                type:Object,
+            autoTime:{type:Number, default:3},
+            enableHTML:{type:Boolean, default:false},
+            closeButton:{type:Object,
                 default(){
                     return{
                         text:'关闭',
-                        callback:function (toast) {
-                            toast.setTimeClose()
-                        }
+                        callback:undefined
                     }
                 }
             },
-            position:{
-                type:String,
+            position:{type:String,
                 default:'top',
                 validate(where){
-                    return ['top','middle','bottom'].indexOf(where)>=0
+                    return ['top','middle','bottom'].indexOf(where) >= 0
                 }
             }
         },
@@ -47,7 +44,6 @@
                 return {
                     [`position-${this.position}`]:true
                 }
-
             }
         },
         methods: {
@@ -55,10 +51,15 @@
                 this.$el.remove()
                 this.$destroy()
             },
-            onClose(){
+            onClickClose(){
                 this.$el.remove()
                 this.$destroy()
-                this.closeButton.callback()
+                if(this.closeButton && typeof this.closeButton.callback === 'function'){
+                    this.closeButton.callback(this) //测试callback加功能：this是toast实例
+                }
+            },
+            log(){
+                console.log('测试callback加功能呢')
             }
         }
     }
@@ -70,10 +71,11 @@
         background-color: rgba(23,34,59,0.7);
         color: #d8ecff;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         position: absolute;
         transition-duration: 2s;
-        width: 94%;
+        /*width: 94%;*/
         padding: 12px 16px;
         font-size:14px;
         & .slot{
