@@ -26,12 +26,35 @@
 
 <body>
 <div id="app">
+    <m-tabs :selected.sync="selectedTab" direction=direction @change=handleName>
+        <m-tabs-nav>
+            <template slot="active">
+                <button>slot</button>
+            </template>
+            <m-tabs-item name="design">设计</m-tabs-item>
+        </m-tabs-nav>
+        <m-tabs-nav>
+            <m-tabs-item name="illustrate"><m-icon icon="carps"></m-icon>插画</m-tabs-item>
+        </m-tabs-nav>
+        <m-tabs-nav>
+            <m-tabs-item name="code" disabled>代码</m-tabs-item>
+        </m-tabs-nav>
+        <m-tabs-content >
+            <m-tabs-pane name="design">设计相关内容</m-tabs-pane>
+        </m-tabs-content>
+        <m-tabs-content>
+            <m-tabs-pane name="illustrate">插画相关内容</m-tabs-pane>
+        </m-tabs-content>
+        <m-tabs-content>
+            <m-tabs-pane name="code">代码相关内容</m-tabs-pane>
+        </m-tabs-content>
+    </m-tabs>
 
 
 
-    <button @click="sendMessage1" style="border: 1px solid gray">top</button>
-    <button @click="sendMessage2" style="border: 1px solid gray">middle</button>
-    <button @click="sendMessage3" style="border: 1px solid gray">bottom</button>
+    <!--<button @click="sendMessage1" style="border: 1px solid gray">top</button>-->
+    <!--<button @click="sendMessage2" style="border: 1px solid gray">middle</button>-->
+    <!--<button @click="sendMessage3" style="border: 1px solid gray">bottom</button>-->
 
 
 

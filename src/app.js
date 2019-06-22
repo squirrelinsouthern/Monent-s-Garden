@@ -12,6 +12,11 @@ import Sider from './sider'
 import Content from './content'
 import Toast from './toast'
 import Plugin from './plugin'
+import Tabs from './tabs'
+import TabsNav from './tabs-nav'
+import TabsItem from './tabs-item'
+import TabsContent from './tabs-content'
+import TabsPane from './tabs-pane'
 
 Vue.use(Plugin)
 Vue.component('m-button', Button);
@@ -24,12 +29,18 @@ Vue.component('m-layout',Layout);
 Vue.component('m-header',Header);
 Vue.component('m-sider',Sider);
 Vue.component('m-content',Content);
-Vue.component('m-footer',Footer);
 Vue.component('m-toast',Toast);
+Vue.component('m-footer',Footer);
+Vue.component('m-tabs',Tabs);
+Vue.component('m-tabs-nav',TabsNav);
+Vue.component('m-tabs-item',TabsItem);
+Vue.component('m-tabs-content',TabsContent);
+Vue.component('m-tabs-pane',TabsPane);
 
 new Vue({
     el:'#app',
     data:{
+        selectedTab:'design',
         loading1:false,
         loading2:true,
         loading3:true,
@@ -65,7 +76,7 @@ new Vue({
         sendMessage(position) {
             this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到', {
                 position:position,
-                autoTime:100,
+                autoTime:4,
                 closeButton:{
                     text:'知道了2',
                     callback(toast){

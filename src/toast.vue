@@ -18,7 +18,7 @@
         name:"MoToast",
         props:{
             autoClose:{type:Boolean,default:true},
-            autoTime:{type:Number, default:3},
+            autoTime:{type:Number, default:5},
             enableHTML:{type:Boolean, default:false},
             closeButton:{type:Object,
                 default(){
