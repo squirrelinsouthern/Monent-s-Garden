@@ -14,11 +14,11 @@
               type:String,
               required:true
             },
-            direction:{
+            tabDirection:{
                 type:String,
                 default:'horizontal',
                 validate(value){
-                    return ['horizontal','vertical'].indexOf(value) >=0
+                    return ['horizontal','vertical'].indexOf(value) >= 0
                 }
             }
         },
@@ -28,9 +28,8 @@
         provide (){
             return { eventBus:this.eventBus }
         },
-        created(){
-            console.log(this);//此刻的Tab实例上有eventBus了
-            // this.$emit('update:selected', 'xxx')
+        mounted(){
+            this.eventBus.$emit('update:selected',this.selected)
         }
     }
 </script>

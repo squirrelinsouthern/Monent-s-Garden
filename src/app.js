@@ -40,7 +40,7 @@ Vue.component('m-tabs-pane',TabsPane);
 new Vue({
     el:'#app',
     data:{
-        selectedTab:'design',
+        selectedTab:'illustrate',
         loading1:false,
         loading2:true,
         loading3:true,

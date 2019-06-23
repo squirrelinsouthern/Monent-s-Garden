@@ -8,7 +8,6 @@
     export default {
         name:'MoTabsContent',
         inject: ['eventBus']
-
     }
 </script>
 
@@ -16,5 +15,4 @@
     .tabs-content{
 
     }
-
 </style>

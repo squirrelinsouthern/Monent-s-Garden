@@ -9,7 +9,7 @@
     <style>
         * {padding: 0;margin: 0;box-sizing: border-box;}
         /*#app {margin: 20px;}*/
-        body {font-size: var(--font-size);background-color: #cbcacb;}
+        body {font-size: var(--font-size);}
         :root {
             --button-height: 36px;
             --font-size: 14px;
@@ -26,26 +26,19 @@
 
 <body>
 <div id="app">
-    <m-tabs :selected.sync="selectedTab" direction=direction @change=handleName>
+    <m-tabs :selected.sync="selectedTab" direction="tabDirection">
         <m-tabs-nav>
-            <template slot="active">
-                <button>slot</button>
+            <template slot="actions">
+                <button>设置</button>
             </template>
-            <m-tabs-item name="design">设计</m-tabs-item>
+            <m-tabs-item name="design"><m-icon icon="lotus"></m-icon>设计</m-tabs-item>
+            <m-tabs-item name="illustrate"><m-icon icon="fan"></m-icon>插画</m-tabs-item>
+            <m-tabs-item name="code" disabled><m-icon icon="penjing"></m-icon>代码</m-tabs-item>
         </m-tabs-nav>
-        <m-tabs-nav>
-            <m-tabs-item name="illustrate"><m-icon icon="carps"></m-icon>插画</m-tabs-item>
-        </m-tabs-nav>
-        <m-tabs-nav>
-            <m-tabs-item name="code" disabled>代码</m-tabs-item>
-        </m-tabs-nav>
+
         <m-tabs-content >
             <m-tabs-pane name="design">设计相关内容</m-tabs-pane>
-        </m-tabs-content>
-        <m-tabs-content>
             <m-tabs-pane name="illustrate">插画相关内容</m-tabs-pane>
-        </m-tabs-content>
-        <m-tabs-content>
             <m-tabs-pane name="code">代码相关内容</m-tabs-pane>
         </m-tabs-content>
     </m-tabs>
