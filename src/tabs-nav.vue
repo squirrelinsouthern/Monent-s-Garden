@@ -33,6 +33,7 @@
         display: flex;
         height:40px;
         justify-content: flex-start;
+        /*align-items: center;*/
         border-bottom: 1px solid #75a0ff;
         position:relative;
         > .slot-wrapper{

@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-item" :class="{activeStyle:active}" @click="xxx">
+    <div class="tabs-item" :class="activeStyle" @click="xxx">
         <slot></slot>
 
     </div>
@@ -18,13 +18,17 @@
             disabled:{type:Boolean, default:false},
             name:{type:String|Number, required:true}
         },
-        methods:{
+        computed:{
             activeStyle(){
                 return {
-                    active:this.active
+                    active:this.active,
+                    disabled:this.disabled
                 }
-            },
+            }
+        },
+        methods:{
             xxx(){
+                if(this.disabled){return}
                 this.eventBus.$emit('update:selected',this.name,this);//精髓啊
             }
         },
@@ -50,10 +54,16 @@
         /*border: 1px solid blueviolet;*/
         flex-shrink: 0;
         cursor: pointer;
+        &.active{
+            color: #75a0ff;
+        }
+        &.disabled{
+            color: gray;
+            cursor: default;
+
+        }
     }
-    .activeStyle{
-        color: #75a0ff;
-    }
+
 
 
 </style>
