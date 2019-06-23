@@ -29,11 +29,11 @@
     }
 </script>
 
-<style lang="scss" scoped type="scss/css">
+<style lang="scss" scoped type="text/scss">
     .tabs-pane{
 
     }
     .activeStyle{
-        background-color: #2ab3e6;
+        /*background-color: #2ab3e6;*/
     }
 </style>

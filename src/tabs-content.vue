@@ -11,8 +11,11 @@
     }
 </script>
 
-<style lang="scss" scoped type="scss/css">
+<style lang="scss" scoped type="text/scss">
     .tabs-content{
+        font-size: 16px;
+        color: #6b778d;
+        padding: 1em;
 
     }
 </style>

@@ -29,12 +29,22 @@
             return { eventBus:this.eventBus }
         },
         mounted(){
-            this.eventBus.$emit('update:selected',this.selected)
+            this.$children.forEach((vm)=>{
+                if(vm.$options.name==='MoTabsNav'){
+                    vm.$children.forEach((item)=>{
+                        if(item.$options.name==='MoTabsItem' && item.name===this.selected){
+
+                            this.eventBus.$emit('update:selected',this.selected,item)
+                        }
+                    })
+                }
+            })
+
         }
     }
 </script>
 
-<style lang="scss" scoped type="scss/css">
+<style lang="scss" scoped type="text/scss">
     .tabs{
 
     }
