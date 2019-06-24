@@ -30,7 +30,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped type="text/scss">
     @keyframes spin {
         0% {transform: rotate(0);}
         100% {transform: rotate(360deg);}
@@ -40,12 +40,12 @@
     }
 
     .m-button{
-        font-size: var(--font-size);
-        height: var(--button-height);
+        font-size: 14px;
+        height: 36px;
         padding: 0 1.5em;
-        color: var(--button-color-font);
-        border-radius: var(--border-radius);
-        background-color: var(--button-bg);
+        color: white;
+        border-radius: 4px;
+        background-color:  #5C8DF6;
         border: 1px solid #2d6bb4;
         cursor: pointer;
         display: inline-flex;
@@ -55,18 +55,18 @@
         transition-duration: 0.4s;
     }
     .m-button:hover{
-         box-shadow: var(--button-shadow);
-         background: var(--button-bg-hover);
+         box-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);
+         background: #75a0ff;
      }
     .m-button:active{
-         background:var(--button-bg-active);
+         background:#507BD8;
      }
     .m-button:focus{
          outline: none;
      }
 
-    .icon-left > .icon {order:-1;margin-right: .3em;}
+    .icon-left > .icon {order:-1;margin-right: .3em; fill:white;}
 
-    .icon-right > .icon {order:1;margin-left: .3em;}
+    .icon-right > .icon {order:1;margin-left: .3em; fill:white;}
 
 </style>
