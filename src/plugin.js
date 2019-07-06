@@ -1,5 +1,6 @@
 import Toast from './toast'
 
+
 function createToast({Vue,msg,propsData,onCloseCallBack}) {
     let Comp = Vue.extend(Toast)
     let toast = new Comp({
@@ -13,7 +14,6 @@ function createToast({Vue,msg,propsData,onCloseCallBack}) {
 }
 
 let currentToast
-
 
 export default {
     install(Vue, options) {

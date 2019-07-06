@@ -10,7 +10,9 @@ module.exports = {
             '/get-started/',
             {
                 title:'组件',
-                children:['/components/button']
+                children:['/components/button',
+                          '/components/input',
+                          '/components/toast']
             }
 
         ]

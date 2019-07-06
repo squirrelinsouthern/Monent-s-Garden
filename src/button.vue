@@ -1,5 +1,5 @@
 <template>
-    <button class="m-button hello" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('change')">
+    <button class="m-button hello" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('click')">
         <m-icon class="icon" v-if="icon && !loading" :icon="icon" ></m-icon>
         <m-icon class="icon spin" v-if="loading" icon="loading" ></m-icon>
         <div class="content">
@@ -10,6 +10,7 @@
 
 <script>
     import Icon from './icon'
+
     export default {
         name:"MoButton",
         components:{'m-icon':Icon},
@@ -46,7 +47,7 @@
         color: white;
         border-radius: 4px;
         background-color:  #5C8DF6;
-        border: 1px solid #2d6bb4;
+        border: 1px solid #dbe3f3;
         cursor: pointer;
         display: inline-flex;
         justify-content: center;

@@ -41,9 +41,7 @@ new Vue({
     el:'#app',
     data:{
         selectedTab:'illustrate',
-        loading1:false,
-        loading2:true,
-        loading3:true,
+        loading:false,
         message:'你可以输入改变我'
     },
     //验证是否触发change的callback函数（是否能收到ee对象）
@@ -74,11 +72,11 @@ new Vue({
         },
 
         sendMessage(position) {
-            this.$toast('您收到一条消息您收到一条消息您收到一条消息您收到', {
+            this.$toast('您收到一条消息', {
                 position:position,
                 autoTime:4,
                 closeButton:{
-                    text:'知道了2',
+                    text:'知道了',
                     callback(toast){
                         toast.log() //callback是可以接受toast回传来的功能
                         console.log('2222okokokok')

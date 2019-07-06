@@ -26,44 +26,61 @@
 
 <body>
 <div id="app">
-    <m-tabs :selected.sync="selectedTab" direction="tabDirection">
-        <m-tabs-nav>
-            <template slot="actions">
-                <m-button>设置</m-button>
-            </template>
-            <m-tabs-item name="design"><m-icon icon="lotus"></m-icon>设计</m-tabs-item>
-            <m-tabs-item name="illustrate"><m-icon icon="fan"></m-icon>插画</m-tabs-item>
-            <m-tabs-item name="code"><m-icon icon="penjing"></m-icon>代码</m-tabs-item>
-            <m-tabs-item name="public" disabled><m-icon icon="tishi" style="fill:grey"></m-icon>展览出版</m-tabs-item>
-        </m-tabs-nav>
+    <!--<m-tabs :selected.sync="selectedTab" direction="tabDirection">-->
+        <!--<m-tabs-nav>-->
+            <!--<template slot="actions">-->
+                <!--<m-button>设置</m-button>-->
+            <!--</template>-->
+            <!--<m-tabs-item name="design"><m-icon icon="lotus"></m-icon>设计</m-tabs-item>-->
+            <!--<m-tabs-item name="illustrate"><m-icon icon="fan"></m-icon>插画</m-tabs-item>-->
+            <!--<m-tabs-item name="code"><m-icon icon="penjing"></m-icon>代码</m-tabs-item>-->
+            <!--<m-tabs-item name="public" disabled><m-icon icon="tishi" style="fill:grey"></m-icon>展览出版</m-tabs-item>-->
+        <!--</m-tabs-nav>-->
 
-        <m-tabs-content >
-            <m-tabs-pane name="design">设计相关内容</m-tabs-pane>
-            <m-tabs-pane name="illustrate">插画相关内容</m-tabs-pane>
-            <m-tabs-pane name="code">代码相关内容</m-tabs-pane>
-        </m-tabs-content>
-    </m-tabs>
+        <!--<m-tabs-content >-->
+            <!--<m-tabs-pane name="design">设计相关内容</m-tabs-pane>-->
+            <!--<m-tabs-pane name="illustrate">插画相关内容</m-tabs-pane>-->
+            <!--<m-tabs-pane name="code">代码相关内容</m-tabs-pane>-->
+        <!--</m-tabs-content>-->
+    <!--</m-tabs>-->
 
 
+    <br>
+    <br>
+    <m-button @click="sendMessage1">上方弹出</m-button>
+    <m-button @click="sendMessage2">中间弹出</m-button>
+    <m-button @click="sendMessage3">下面弹出</m-button>
+    <!--<br>-->
+    <!--<br>-->
+    <!--<button @click="sendMessage1">ttttt</button>-->
+    <!--<button @click="sendMessage2">mmmmmm</button>-->
+    <!--<button @click="sendMessage3">bbbbbb</button>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<button @click="$toast('上方弹出')">上方弹出</button>-->
+    <!--<button @click="$toast('上方弹出',{position:'middle'})">中间弹出</button>-->
+    <!--<button @click="$toast('上方弹出',{position:'bottom'})">下面弹出</button>-->
+    <br>
+    <br>
+    <m-button @click="$toast('莫奈的一张画诞生了一个画派。')">上方弹出</m-button>
+    <m-button @click="$toast('他在破晓的河口边架起画架，从黑夜的尽头开始等待黎明',{position:'middle'})">中间弹出</m-button>
+    <m-button @click="$toast('等待水面上第一道日出之光',{position:'bottom'})">下面弹出</m-button>
 
-    <!--<button @click="sendMessage1" style="border: 1px solid gray">top</button>-->
-    <!--<button @click="sendMessage2" style="border: 1px solid gray">middle</button>-->
-    <!--<button @click="sendMessage3" style="border: 1px solid gray">bottom</button>-->
 
 
 
     <!--<m-row :gutter="10">-->
         <!--<m-col :span="24" :ipad="{span:12,offset:1}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
         <!--</m-col>-->
         <!--<m-col :span="24" :ipad="{span:11}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
         <!--</m-col>-->
         <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
         <!--</m-col>-->
         <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #cc3b62">xiangyshi</div>-->
+            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
         <!--</m-col>-->
     <!--</m-row>-->
 
@@ -88,30 +105,37 @@
     <!--<br>-->
 
     <div class="box">
-        <m-button :loading="loading1" @change="loading1=!loading1">
-            默认样式
-        </m-button>
-        <m-button icon="aixin"  where-icon="left">
-            默认样式
-        </m-button>
-        <m-button icon="smile" :loading="loading" @change="loading=!loading" where-icon="right">
-            默认样式
+        <!--<m-button :loading="loading1" @change="loading1=!loading1">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+        <!--<m-button icon="aixin"  where-icon="left">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+        <!--<m-button icon="smile" :loading="loading" @change="loading=!loading" where-icon="right">-->
+            <!--默认样式-->
+        <!--</m-button>-->
+        <m-button>默认样式</m-button>
+        <m-button icon="aixin">icon在左</m-button>
+        <m-button icon="aixin" where-icon="right">icon在右</m-button>
+        <m-button icon="smile" :loading="true">loading状态</m-button>
+        <m-button icon="smile" :loading="loading" @click="loading=!loading" where-icon="right">
+            点击切换icon
         </m-button>
     </div>
-        <m-icon icon="carps"></m-icon>
-        <m-icon icon="loading"></m-icon>
+        <!--<m-icon icon="carps"></m-icon>-->
+        <!--<m-icon icon="loading"></m-icon>-->
 
-        <svg class="m-icon">
-        <use xlink:href="#m-carps"></use>
-        </svg>
-    <div class="box">
-        <div id="test"></div>
-        <m-button-group>
-            <m-button icon="last">上一页</m-button>
-            <m-button>更多</m-button>
-            <m-button icon="next" where-icon="right">下一页</m-button>
-        </m-button-group>
-    </div>
+        <!--<svg class="m-icon">-->
+        <!--<use xlink:href="#m-carps"></use>-->
+        <!--</svg>-->
+    <!--<div class="box">-->
+        <!--<div id="test"></div>-->
+        <!--<m-button-group>-->
+            <!--<m-button icon="last">上一页</m-button>-->
+            <!--<m-button>更多</m-button>-->
+            <!--<m-button icon="next" where-icon="right">下一页</m-button>-->
+        <!--</m-button-group>-->
+    <!--</div>-->
 
 </div>
 

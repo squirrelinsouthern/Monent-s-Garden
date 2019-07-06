@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper" :class="buttonClass">
-        <div class="toast" >
+        <div class="mo-toast" >
             <div class="slot"  v-if="!enableHTML">
                 <slot ></slot>
             </div>
@@ -14,11 +14,14 @@
 </template>
 
 <script>
+    // import Button from './button'
+
     export default {
         name:"MoToast",
+        // components:{'m-button': Button},
         props:{
             autoClose:{type:Boolean,default:true},
-            autoTime:{type:Number, default:5},
+            autoTime:{type:Number, default:50},
             enableHTML:{type:Boolean, default:false},
             closeButton:{type:Object,
                 default(){
@@ -70,65 +73,75 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
+    $animation-duration: 300ms;
     @keyframes slide-up {
-        0% {opacity: 0; transform:translateY(100%)}
-        100% {opacity: 1; transform:translateY(0%);}
+        0% {opacity: 0; transform: translateY(100%);}
+        100% {opacity: 1;transform: translateY(0%);}
     }
     @keyframes slide-down {
-        0% {opacity: 0; transform:translateY(-100%);}
-        100% {opacity: 1; transform:translateY(0%)}
+        0% {opacity: 0; transform: translateY(-100%);}
+        100% {opacity: 1;transform: translateY(0%);}
+    }
+    @keyframes fade-in {
+        0% {opacity: 0; }
+        100% {opacity: 1;}
     }
 
     .wrapper{
-        position: absolute;
-        width: 94%;
+        position: fixed;
+        /*position: absolute;*/ //这个BUG找了好久 会移位
         transform: translateX(-50%);
         left:50%;
+        z-index:99 !important;
         &.position-top{
             top:0px;
-            .toast{
+            .mo-toast{
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
-                animation: slide-down 0.3s;
+                animation: slide-down $animation-duration;
             }
         }
         &.position-bottom{
             bottom: 0px;
-            .toast{
+            .mo-toast{
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+                animation: slide-up $animation-duration;
             }
         }
         &.position-middle{
             top:50%;
             transform: translate(-50%, -50%);
+            .mo-toast{
+                animation: fade-in $animation-duration;
+            }
+        }
+
+        .mo-toast{
+            border-radius: 4px;
+            background-color: rgba(100,142,239,0.4);
+            color: #5C8DF6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            font-size:14px;
+            & .slot{
+                margin-right: -4px;
+            }
+            & span{
+                color: #f3628d;
+            }
+            & .close{
+                flex-shrink: 0;
+                display: inline;
+                padding-left: 16px;
+                height:100%;
+            }
         }
     }
 
-    .toast{
-        border-radius: 4px;
-        background-color: rgba(23,34,59,0.7);
-        color: #d8ecff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 16px;
-        font-size:14px;
-        animation: slide-up 0.3s;
-        animation-timing-function: ease-in;
-        & .slot{
-            margin-right: -4px;
-        }
-        & span{
-            color: #ff6768;
-        }
-        & .close{
-            flex-shrink: 0;
-            display: inline;
-            padding-left: 16px;
-            height:100%;
-        }
-    }
+
 
 
 

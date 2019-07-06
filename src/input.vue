@@ -40,34 +40,29 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
-    $height:32px;
-    $border-color:#75a0ff;
-    $font-size:14px;
-
-
 .wrapper{
     display: inline-block;
-    ::placeholder{color: #b1d3ff;}
+    ::placeholder{color: #cfD9ED;}
     >input{
         height: 32px;
-        border: 1px solid $border-color;
+        border: 1px solid #5C8DF6;
         border-radius: 4px;
         transition-duration: 0.5s;
         padding: 0 12px;
-        font-size: $font-size;
+        font-size: 14px;
         color: #2d6bb4;
 
         &:hover{
-            border-color: #2d6bb4;
+            border-color: #5C8DF6;
         }
         &:focus{
             outline: none;
             box-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);
         }
         &[disabled]{
-            border-color: #75a0ff;
-            background-color: #8cacd8;
-            color: #d8ecff;
+            border: none;
+            background-color: rgb(161,186,244);
+            color: rgb(227,234,251);
             cursor: not-allowed;
         }
         &[readonly]{
@@ -76,10 +71,10 @@
 
     }
     .error{
-        border-color: #cc3b62;
-        color:#cc3b62;
+        border-color: #f3628d;
+        color:#f3628d;
         &:hover{
-            border-color: #cc3b62;
+            border-color: #f3628d;
         }
         &:focus{
             outline: none;
@@ -91,8 +86,8 @@
     .tishi{
         display: block;
         padding-top: 2px;
-        .m-icon{fill:#cc3b62;width:12px;vertical-align: middle;}
-        .errorMessage{color:#cc3b62;vertical-align: middle;}
+        .m-icon{fill:#f3628d;width:12px;vertical-align: middle;}
+        .errorMessage{color:#f3628d;vertical-align: middle;}
     }
 
 

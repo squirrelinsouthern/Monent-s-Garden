@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Button-按钮
 sidebarDepth: 2
 ---
 
@@ -13,11 +13,11 @@ sidebarDepth: 2
 <button-demo></button-demo>
 
 ```html{1}
-<m-button>默认样式</m-button>
+ <m-button>默认样式</m-button>
 <m-button icon="aixin">icon在左</m-button>
 <m-button icon="aixin" where-icon="right">icon在右</m-button>
 <m-button icon="smile" :loading="true">loading状态</m-button>
-<m-button icon="smile" :loading="loading" @change="loading=!loading" where-icon="right">
+<m-button icon="smile" :loading="loading" @click="loading=!loading" where-icon="right">
     点击切换icon
 </m-button>
 ```
