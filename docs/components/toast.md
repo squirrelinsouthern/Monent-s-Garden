@@ -1,9 +1,9 @@
 ---
-title: Toast-弹出层
+title: Toast-消息弹出
 sidebarDepth: 2
 ---
 
-# Toast
+# Toast-消息弹出
 
 ## this.$toast
 

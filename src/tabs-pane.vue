@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-pane" :class="{activeStyle:active}" v-if="active">
+    <div class="tabs-pane" v-if="active">
         <slot></slot>
     </div>
 </template>
@@ -17,23 +17,21 @@
             name:{type:String|Number, required:true}
         },
         created(){
-            this.eventBus.$on('update:selected',(value)=>{
-                if(this.name === value){
-                    this.active = true
-                }else{
-                    this.active = false
-                }
-            })
+            this.watchSelect()
+        },
+        methods:{
+            /* active状态默认为false，监听下面的事件，当发现传入的name和该组件的name一致，
+            说明当前active的tab和这个pane匹配，那么就设置active为true，并只显示active状态的pane */
+            watchSelect(){
+                this.eventBus.$on('update:selected',(value)=>{
+                    this.active = name === this.name
+                })
+            }
         }
 
     }
 </script>
 
 <style lang="scss" scoped type="text/scss">
-    .tabs-pane{
 
-    }
-    .activeStyle{
-        /*background-color: #2ab3e6;*/
-    }
 </style>

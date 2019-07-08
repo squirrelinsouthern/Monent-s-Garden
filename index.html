@@ -21,6 +21,31 @@
             --button-shadow: 2px 2px 4px rgba(79, 100, 230, 0.5);
         }
         .box{padding: 20px 0}
+        .demoCol1 {
+            height: 40px;
+            border: 1px solid #f3628d;
+            border-radius: 4px;
+            background: #ffb7d1;
+            color:#f3628d;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 0
+        }
+        .demoCol2 {
+            height: 40px;
+            border: 1px solid #5C8DF6;
+            border-radius: 4px;
+            background: #b1d3ff;
+            color:#5C8DF6;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 0
+        }
+
     </style>
 </head>
 
@@ -45,11 +70,11 @@
     <!--</m-tabs>-->
 
 
-    <br>
-    <br>
-    <m-button @click="sendMessage1">上方弹出</m-button>
-    <m-button @click="sendMessage2">中间弹出</m-button>
-    <m-button @click="sendMessage3">下面弹出</m-button>
+    <!--<br>-->
+    <!--<br>-->
+    <!--<m-button @click="sendMessage1">上方弹出</m-button>-->
+    <!--<m-button @click="sendMessage2">中间弹出</m-button>-->
+    <!--<m-button @click="sendMessage3">下面弹出</m-button>-->
     <!--<br>-->
     <!--<br>-->
     <!--<button @click="sendMessage1">ttttt</button>-->
@@ -60,29 +85,115 @@
     <!--<button @click="$toast('上方弹出')">上方弹出</button>-->
     <!--<button @click="$toast('上方弹出',{position:'middle'})">中间弹出</button>-->
     <!--<button @click="$toast('上方弹出',{position:'bottom'})">下面弹出</button>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<m-button @click="$toast('莫奈的一张画诞生了一个画派。')">上方弹出</m-button>-->
+    <!--<m-button @click="$toast('他在破晓的河口边架起画架，从黑夜的尽头开始等待黎明',{position:'middle'})">中间弹出</m-button>-->
+    <!--<m-button @click="$toast('等待水面上第一道日出之光',{position:'bottom'})">下面弹出</m-button>-->
+
+
+    <h4>24格网格</h4>
+    <m-row>
+        <m-col :span="12"><div class="demoCol1">12</div></m-col>
+        <m-col :span="12"><div class="demoCol2">12</div></m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="8"><div class="demoCol1">8</div></m-col>
+        <m-col :span="8"><div class="demoCol2">8</div></m-col>
+        <m-col :span="8"><div class="demoCol1">8</div></m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="4"><div class="demoCol1">4</div></m-col>
+        <m-col :span="4"><div class="demoCol2">4</div></m-col>
+        <m-col :span="4"><div class="demoCol1">4</div></m-col>
+        <m-col :span="4"><div class="demoCol2">4</div></m-col>
+        <m-col :span="4"><div class="demoCol1">4</div></m-col>
+        <m-col :span="4"><div class="demoCol2">4</div></m-col>
+    </m-row>
+    <m-row>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="2"><div class="demoCol2">2</div></m-col>
+    </m-row>
+
     <br>
     <br>
-    <m-button @click="$toast('莫奈的一张画诞生了一个画派。')">上方弹出</m-button>
-    <m-button @click="$toast('他在破晓的河口边架起画架，从黑夜的尽头开始等待黎明',{position:'middle'})">中间弹出</m-button>
-    <m-button @click="$toast('等待水面上第一道日出之光',{position:'bottom'})">下面弹出</m-button>
+
+    <h4>设置gutter</h4>
+    <m-row :gutter="20">
+        <m-col :span="8"><div class="demoCol1">8</div></m-col>
+        <m-col :span="8"><div class="demoCol2">8</div></m-col>
+        <m-col :span="8"><div class="demoCol1">8</div></m-col>
+    </m-row>
+    <m-row :gutter="20">
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
+
+    <br>
+    <br>
+
+    <h4>设置间隙</h4>
+    <m-row>
+        <m-col :span="2"><div class="demoCol1">2</div></m-col>
+        <m-col :span="8" :offset="2"><div class="demoCol2">8</div></m-col>
+        <m-col :span="2" :offset="4"><div class="demoCol1">2</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
+    <br>
+    <br>
+    <h4>align栅格三种对齐方式</h4>
+    <m-row align="right">
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
+    <m-row align="center">
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
+
+    <m-row align="left">
+        <m-col :span="6"><div class="demoCol1">6</div></m-col>
+        <m-col :span="6"><div class="demoCol2">6</div></m-col>
+    </m-row>
 
 
 
+    <br>
+    <br>
 
-    <!--<m-row :gutter="10">-->
-        <!--<m-col :span="24" :ipad="{span:12,offset:1}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
-        <!--</m-col>-->
-        <!--<m-col :span="24" :ipad="{span:11}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
-        <!--</m-col>-->
-        <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
-        <!--</m-col>-->
-        <!--<m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
-            <!--<div id="kk" style="border-radius:4px;border:1px solid white;background-color: #5C8DF6">xiangyshi</div>-->
-        <!--</m-col>-->
-    <!--</m-row>-->
+    <h4>响应式</h4>
+    <m-row :gutter="10">
+        <m-col :span="24" :ipad="{span:12,offset:1}" :narrow-pc="{span:8}">
+            <div class="demoCol1">xiangyshi</div>
+        </m-col>
+        <m-col :span="24" :ipad="{span:11}" :narrow-pc="{span:8}">
+            <div class="demoCol2">xiangyshi</div>
+        </m-col>
+        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+            <div class="demoCol1">xiangyshi</div>
+        </m-col>
+        <m-col :span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+            <div class="demoCol2">xiangyshi</div>
+        </m-col>
+    </m-row>
 
     <!--<br>-->
     <!--<br>-->
@@ -104,7 +215,7 @@
     <!--<br>-->
     <!--<br>-->
 
-    <div class="box">
+    <!--<div class="box">-->
         <!--<m-button :loading="loading1" @change="loading1=!loading1">-->
             <!--默认样式-->
         <!--</m-button>-->
@@ -114,14 +225,14 @@
         <!--<m-button icon="smile" :loading="loading" @change="loading=!loading" where-icon="right">-->
             <!--默认样式-->
         <!--</m-button>-->
-        <m-button>默认样式</m-button>
-        <m-button icon="aixin">icon在左</m-button>
-        <m-button icon="aixin" where-icon="right">icon在右</m-button>
-        <m-button icon="smile" :loading="true">loading状态</m-button>
-        <m-button icon="smile" :loading="loading" @click="loading=!loading" where-icon="right">
-            点击切换icon
-        </m-button>
-    </div>
+        <!--<m-button>默认样式</m-button>-->
+        <!--<m-button icon="aixin">icon在左</m-button>-->
+        <!--<m-button icon="aixin" where-icon="right">icon在右</m-button>-->
+        <!--<m-button icon="smile" :loading="true">loading状态</m-button>-->
+        <!--<m-button icon="smile" :loading="loading" @click="loading=!loading" where-icon="right">-->
+            <!--点击切换icon-->
+        <!--</m-button>-->
+    <!--</div>-->
         <!--<m-icon icon="carps"></m-icon>-->
         <!--<m-icon icon="loading"></m-icon>-->
 

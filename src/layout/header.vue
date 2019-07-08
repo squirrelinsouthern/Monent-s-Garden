@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="header">
         <slot></slot>
     </div>
 </template>
@@ -11,9 +11,8 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
-    .content{
-        background-color: #6b778d;
-        flex-grow:1;
-        height: 100%;
+    .header{
+        background-color: #5C8DF6;
+        height: 80px;
     }
 </style>

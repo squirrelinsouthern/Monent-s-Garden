@@ -1,18 +1,17 @@
 <template>
-    <div class="header">
+    <div class="sider">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-
+        name:"MoSider"
     }
 </script>
 
 <style lang="scss" scoped type="text/scss">
-    .header{
-        background-color: #8cacd8;
-        height: 80px;
+    .sider{
+        background-color: #f3628d;
     }
 </style>

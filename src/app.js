@@ -2,14 +2,14 @@ import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
-import Row from './row'
-import Col from './col'
+import Row from './grid/row'
+import Col from './grid/col'
 import Input from './input'
-import Layout from './layout'
-import Footer from './footer'
-import Header from './header'
-import Sider from './sider'
-import Content from './content'
+import Layout from './layout/layout'
+import Footer from './layout/footer'
+import Header from './layout/header'
+import Sider from './layout/sider'
+import Content from './layout/content'
 import Toast from './toast'
 import Plugin from './plugin'
 import Tabs from './tabs'
@@ -19,6 +19,7 @@ import TabsContent from './tabs-content'
 import TabsPane from './tabs-pane'
 
 Vue.use(Plugin)
+//注册为全局组件
 Vue.component('m-button', Button);
 Vue.component('m-icon', Icon);
 Vue.component('m-button-group', ButtonGroup);

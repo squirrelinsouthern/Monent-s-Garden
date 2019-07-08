@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="content">
         <slot></slot>
     </div>
 </template>
@@ -11,8 +11,9 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
-  .footer{
-      background-color: #8cacd8;
-      height: 80px;
-  }
+    .content{
+        background-color: rgb(161,186,244);
+        flex-grow:1;
+        height: 100%;
+    }
 </style>
