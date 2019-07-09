@@ -8,10 +8,8 @@
     //import vue主要是因为在该组件写事件中心时需要用到Vue
     import Vue from 'vue'
 
-
     export default {
         name:'MoTabs',
-
         props:{
             //当前选中的tab
             selected:{

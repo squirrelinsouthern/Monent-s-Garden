@@ -12,11 +12,11 @@ import Sider from './layout/sider'
 import Content from './layout/content'
 import Toast from './toast'
 import Plugin from './plugin'
-import Tabs from './tabs'
-import TabsNav from './tabs-nav'
-import TabsItem from './tabs-item'
-import TabsContent from './tabs-content'
-import TabsPane from './tabs-pane'
+import Tabs from './tabs/tabs'
+import TabsNav from './tabs/tabs-nav'
+import TabsItem from './tabs/tabs-item'
+import TabsContent from './tabs/tabs-content'
+import TabsPane from './tabs/tabs-pane'
 
 Vue.use(Plugin)
 //注册为全局组件

@@ -44,10 +44,10 @@
                 this.eventBus.$on('update:selected',(value)=>{
                     //当name就是当前tab的name时，设置这个tab为active状态
                     if(this.name === value){
-                        console.log(`${this.name}--choose`);
+                        // console.log(`${this.name}--choose`);
                         this.active = true
                     }else{
-                        console.log(`${this.name}--nochoose`);
+                        // console.log(`${this.name}--nochoose`);
                         this.active = false
                     }
                 })

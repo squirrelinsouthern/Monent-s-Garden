@@ -16,6 +16,6 @@
         font-size: 16px;
         color: #6b778d;
         padding: 1em;
-
+        background-color: rgb(227,234,251);
     }
 </style>

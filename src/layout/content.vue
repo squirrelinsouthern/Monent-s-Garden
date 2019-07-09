@@ -14,6 +14,5 @@
     .content{
         background-color: rgb(161,186,244);
         flex-grow:1;
-        height: 100%;
     }
 </style>

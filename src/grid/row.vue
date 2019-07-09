@@ -1,6 +1,6 @@
 <template>
       <!--原始写法 :style="{marginLeft: -gutter/2+'px', marginRight: -gutter/2+'px'}"-->
-    <div class="row" :style="rowStyle" :class="textAlign">
+    <div class="row" :style="marginStyle" :class="rowAlign">
         <slot></slot>
     </div>
 </template>
@@ -21,12 +21,12 @@
             }
         },
         computed:{
-          rowStyle(){
+          marginStyle(){
               let gutter=this.gutter
               return { marginLeft: -gutter/2+'px', marginRight: -gutter/2+'px' }
           },
           //设置内容文字对齐方式 返回[align-left,align-center,align-right]
-          textAlign(){
+          rowAlign(){
               let {align} = this
               return [ align && `align-${align}`]
           }
@@ -49,7 +49,6 @@
 <style scoped lang="scss" type="text/scss">
     .row{
         display: flex;
-        flex-wrap: wrap;
         &.align-left{
             justify-content: flex-start;
         }

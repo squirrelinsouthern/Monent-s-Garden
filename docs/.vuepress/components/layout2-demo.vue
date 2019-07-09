@@ -26,5 +26,17 @@
     }
 </script>
 <style>
+    .header{
+        height: 50px;
+    }
+    .footer{
+        height: 50px;
+    }
 
+    .content{
+        height: 100px;
+    }
+    .sider{
+        width: 50px;
+    }
 </style>

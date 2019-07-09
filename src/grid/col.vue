@@ -1,13 +1,17 @@
 <template>
     <!--:style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}"原始写法-->
-    <div class="col" :class="colClass" :style="colStyle">
+    <div class="col" :class="colClass" :style="paddingStyle">
         <slot></slot>
     </div>
 </template>
 
 <script>
+    //用来验证ipad narrowPc pc widePc
+    //validator验证传进来的对象的key必须是span\offset
+    //验证[1,2,3]子集[1,2][2,3]
     let validator = (value) => {
         let keys = Object.keys(value)
+        //先设置验证结果为true
         let valid = true
         keys.forEach(key => {
             if (!['span', 'offset'].includes(key)) {
@@ -26,6 +30,7 @@
             offset:{
                 type:Number
             },
+            //ES6,如果key和value值一样，直接写一个就可以
             phone: {type: Object, validator},
             ipad: {type: Object, validator},
             narrowPc: {type: Object, validator},
@@ -76,7 +81,7 @@
             },
             // data只在created的时候取一次值，data变computed也变，所以要写到computed里面
             // 要写成一个函数
-            colStyle(){
+            paddingStyle(){
                 return{
                     paddingLeft: this.gutter / 2 + 'px',
                     paddingRight: this.gutter / 2+ 'px',

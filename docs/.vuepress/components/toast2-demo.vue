@@ -18,7 +18,7 @@
         components:{'m-button': Button},
         methods:{
             sendMessage(position) {
-                this.$toast('您收到一条消息', {
+                this.$toast('不许在我的池塘里，洗笔！！', {
                     position:position,
                     autoTime:4,
                     closeButton:{

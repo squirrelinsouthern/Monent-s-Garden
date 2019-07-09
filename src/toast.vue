@@ -3,15 +3,12 @@
         <div class="mo-toast" >
             <!--slot标签里传入想要弹出的内容 slot标签不能用v-html
             如果用户想让传入的内容以HTML的方式渲染，那么就传入enableHTML参数为true-->
-            <div class="slot"  v-if="!enableHTML">
+            <div class="slot" v-if="!enableHTML">
                 <slot ></slot>
+                <!-- 在plugin.js中，用户传入的message数组被传入了toast组件的$slots.default中，
+                所以这里当作HTML渲染时，值取的是this(toast组件实例)中$slots.default的内容-->
             </div>
-
-            <!-- 如果用户想把弹出的内容以HTML方式显示就传入enableHTML:true
-                在plugin.js中，用户传入的message数组被传入了toast组件的$slots.default中，所以这里当作
-                HTML渲染时，值取的是this(toast组件实例)中$slots.default的内容-->
-            <div v-html="$slots.default[0]" v-else></div>
-
+            <div  v-else v-html="this.$slots.default"></div>
             <!--关闭按钮的内容，默认是 [关闭]-->
             <span class="close" v-if="closeButton" @click="onClickClose">
             {{closeButton.text}}
@@ -38,7 +35,7 @@
             /* 闭包。如果页面中多次使用该对象，那么都会'引用'同一对象，因此这里需要用一个函数返回对象*/
                 default(){
                     return{
-                        text:'关闭',
+                        text:'',
                         callback:undefined
                     }
                 }
@@ -139,8 +136,8 @@
 
         .mo-toast{
             border-radius: 4px;
-            background-color: rgba(100,142,239,0.4);
-            color: #5C8DF6;
+            background-color: #f3628d;
+            color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -150,7 +147,7 @@
                 margin-right: -4px;
             }
             & span{
-                color: #f3628d;
+                color: #fff500;
             }
             & .close{
                 flex-shrink: 0;

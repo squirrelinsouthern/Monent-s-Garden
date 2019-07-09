@@ -49,6 +49,8 @@
             display: flex;
             align-items: center;
             padding-right: 20px;
+            flex-wrap: nowrap;
+            align-items: center;
         }
         > .line{
             position: absolute;
