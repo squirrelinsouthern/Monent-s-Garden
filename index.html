@@ -85,8 +85,11 @@
     <br>
 
 
-
-    <m-tabs :selected.sync="selectedTab" direction="tabDirection">
+    app给tabs传了值，存在tabs子的props里，但tabs子只能通知m-tabs父把改父自己改掉
+    <!--<m-tabs :selected.sync="selectedTab">-->
+    $emit(event, args) 方法，触发event ，抛出一个 arg参数
+    父组件监听这个事件，然后可以通过 $event 访问到 子元素抛出的 args 这个参数
+    <m-tabs :selected="selectedTab" @update:selected="selectedTab = $event">
         <m-tabs-nav>
             <template slot="actions">
                 <m-button>设置</m-button>

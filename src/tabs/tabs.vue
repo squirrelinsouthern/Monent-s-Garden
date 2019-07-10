@@ -43,6 +43,7 @@
         },
         //在mounted阶段该组件的所有子组件已经完成挂载
         mounted(){
+
             /* 如果用户没有在tabs组件内传入任何子组件，那么this.$children.length就是0,
             因为像div这些子元素并不会被this.$children检测到*/
             this.$children.forEach((vm)=>{

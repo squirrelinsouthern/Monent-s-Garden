@@ -56,6 +56,7 @@ new Vue({
     //     },2000)
     // },
     created(){
+        console.log($event);
         // this.$toast('<p>段落<strong>hi</strong><a href="www.qq.com">a</a></p>',{
         //     position:'middle',
         //     enableHTML:true,
