@@ -7,7 +7,10 @@ sidebarDepth: 2
 
 ## 24栏栅格
 #### 预览
-<grid1-demo></grid1-demo>
+<ClientOnly>
+    <grid1-demo></grid1-demo>
+</ClientOnly>
+
 ```html{1}
 .demoCol1 {
    height: 40px;border: 1px solid #f3628d;border-radius: 4px;
@@ -60,7 +63,10 @@ sidebarDepth: 2
 ```
 ## 设置gutter
 #### 预览
-<grid2-demo></grid2-demo>
+<ClientOnly>
+    <grid2-demo></grid2-demo>
+</ClientOnly>
+
 ```html{1}
 <m-row :gutter="20">
     <m-col :span="8"><div class="demoCol1">8</div></m-col>

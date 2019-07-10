@@ -25,6 +25,7 @@
   "homepage": "https://github.com/squirrelinsouthern/Monent-s-Garden#readme",
   "dependencies": {
     "vue": "^2.6.10",
+    "vue-server-renderer": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {

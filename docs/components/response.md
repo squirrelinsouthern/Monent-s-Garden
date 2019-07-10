@@ -7,7 +7,10 @@ sidebarDepth: 2
 
 ## 基础响应式 
 #### 预览(尺寸：ipad、narrowPc、pc、widePc)
-<response1-demo></response1-demo>
+<ClientOnly>
+    <response1-demo></response1-demo>
+</ClientOnly>
+
 ```html{1}
 .demoCol1 {
    height: 40px;border: 1px solid #f3628d;border-radius: 4px;
@@ -31,7 +34,10 @@ sidebarDepth: 2
 
 ## 可设置offset空白间隙
 #### 预览
-<response2-demo></response2-demo>
+<ClientOnly>
+    <response2-demo></response2-demo>
+</ClientOnly>
+
 ```html{1}
  <m-row :gutter="8">
     <m-col :span="12" :ipad="{span:6,offset:2}" :narrow-pc="{span:12,offset:4}">

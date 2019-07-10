@@ -7,7 +7,10 @@ sidebarDepth: 2
 
 ## $toast基础用法
 #### 预览
-<toast1-demo></toast1-demo>
+<ClientOnly>
+    <toast1-demo></toast1-demo>
+</ClientOnly>
+
 ```html{1}
 <m-button @click="$toast('天气太热，不想画画')">上方弹出</m-button>
 <m-button @click="$toast('坐等快递，无心画画',{position:'middle'})">中间弹出</m-button>
@@ -15,7 +18,10 @@ sidebarDepth: 2
 ```
 ## 设置关闭按钮
 #### 预览
-<toast2-demo></toast2-demo>
+<ClientOnly>
+    <toast2-demo></toast2-demo>
+</ClientOnly>
+
 ```html{1}
 <m-button @click="sendMessage1">上方弹出</m-button>
 <m-button @click="sendMessage2">中间弹出</m-button>
@@ -46,7 +52,10 @@ methods:{
 ```
 ## 支持HTML
 #### 预览
-<toast3-demo></toast3-demo>
+<ClientOnly>
+    <toast3-demo></toast3-demo>
+</ClientOnly>
+
 ```html{1}
 <m-button @click="supportHTML">点我试下</m-button>
 methods: {

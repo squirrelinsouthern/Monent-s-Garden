@@ -7,7 +7,10 @@ sidebarDepth: 2
 
 ## 简单用法
 #### 预览
-<tabs1-demo></tabs1-demo>
+<ClientOnly>
+    <tabs1-demo></tabs1-demo>
+</ClientOnly>
+
 ```html{1}
 <m-tabs :selected.sync="selectedTab" direction="tabDirection">
     <m-tabs-nav>
@@ -25,7 +28,10 @@ sidebarDepth: 2
 ```
 ## 增加按钮和icon
 #### 预览
-<tabs2-demo></tabs2-demo>
+<ClientOnly>
+    <tabs2-demo></tabs2-demo>
+</ClientOnly>
+
 ```html{1}
 <m-tabs :selected.sync="selectedTab" direction="tabDirection">
     <m-tabs-nav>

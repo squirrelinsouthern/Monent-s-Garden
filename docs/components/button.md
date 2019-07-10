@@ -7,7 +7,9 @@ sidebarDepth: 2
 
 ## 基础按钮
 #### 预览
+<ClientOnly>
 <button1-demo></button1-demo>
+</ClientOnly>
 ```html{1}
 <m-button>默认样式</m-button>
 <m-button icon="aixin">icon在左</m-button>
@@ -16,7 +18,10 @@ sidebarDepth: 2
 
 ## Loading按钮
 #### 预览
+<ClientOnly>
 <button2-demo></button2-demo>
+</ClientOnly>
+
 ```html{1}
 <m-button icon="smile" :loading="true">loading状态</m-button>
 <m-button icon="smile" :loading="loading" @click="loading=!loading" where-icon="right">
@@ -25,7 +30,10 @@ sidebarDepth: 2
 ```
 ## 按钮组
 #### 预览
+<ClientOnly>
 <button3-demo></button3-demo>
+</ClientOnly>
+
 ```html{1}
 <m-button-group>
     <m-button icon="last">上一页</m-button>

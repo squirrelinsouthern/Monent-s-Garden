@@ -7,7 +7,10 @@ sidebarDepth: 2
 
 ## 样式1
 #### 预览
-<layout1-demo></layout1-demo>
+<ClientOnly>
+    <layout1-demo></layout1-demo>
+</ClientOnly>
+
 ```html{1}
 <style>
 .header{ height: 50px;}
@@ -22,7 +25,10 @@ sidebarDepth: 2
 ```
 ## 样式2
 #### 预览
-<layout2-demo></layout2-demo>
+<ClientOnly>
+    <layout2-demo></layout2-demo>
+</ClientOnly>
+
 ```html{1}
 <style>
 .header{ height: 50px;}
