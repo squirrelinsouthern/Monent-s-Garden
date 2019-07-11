@@ -12,10 +12,10 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped type="text/scss">
     .m-icon {
         width: 1.2em;
         height: 1.2em;
-        fill:var(--button-color-font);
+        fill:white;
     }
 </style>

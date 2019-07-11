@@ -8,7 +8,7 @@ sidebarDepth: 2
 ## 样式1
 #### 预览
 <ClientOnly>
-    <layout1-demo></layout1-demo>
+  <layout1-demo></layout1-demo>
 </ClientOnly>
 
 ```html{1}
@@ -26,7 +26,7 @@ sidebarDepth: 2
 ## 样式2
 #### 预览
 <ClientOnly>
-    <layout2-demo></layout2-demo>
+  <layout2-demo></layout2-demo>
 </ClientOnly>
 
 ```html{1}

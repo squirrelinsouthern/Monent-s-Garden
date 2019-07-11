@@ -7,8 +7,9 @@ sidebarDepth: 2
 
 ## 简单用法
 #### 预览
+
 <ClientOnly>
-    <tabs1-demo></tabs1-demo>
+<tabs1-demo></tabs1-demo>
 </ClientOnly>
 
 ```html{1}
@@ -26,10 +27,12 @@ sidebarDepth: 2
     </m-tabs-content>
 </m-tabs>
 ```
+
 ## 增加按钮和icon
 #### 预览
+
 <ClientOnly>
-    <tabs2-demo></tabs2-demo>
+<tabs2-demo></tabs2-demo>
 </ClientOnly>
 
 ```html{1}

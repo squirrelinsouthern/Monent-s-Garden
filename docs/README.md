@@ -12,5 +12,5 @@ features:
   details: 学代码的路啊~~感谢每个给予我帮助的朋友们！---2019 夏
 footer: MIT Licensed | Copyright © 2019-present squirrelinsouthern
 ---
-
+![An image](./.vuepress/public/thankyou.png)
 

@@ -2,9 +2,9 @@
     <button class="m-button hello" :class="{[`icon-${whereIcon}`]:true}" @click="$emit('click')">
         <m-icon class="icon" v-if="icon && !loading" :icon="icon" ></m-icon>
         <m-icon class="icon spin" v-if="loading" icon="loading" ></m-icon>
-        <div class="content">
+        <!--<div class="content">-->
             <slot></slot>
-        </div>
+        <!--</div>-->
     </button>
 </template>
 

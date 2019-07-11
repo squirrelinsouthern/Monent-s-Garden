@@ -9,9 +9,9 @@ title: 安装
 :::
 
 ## 本地引用
-* 到官方仓库 [下载](https://github.com/squirrelinsouthern/Monent-s-Garden) 或使用命令行克隆到本地
+* 到官方仓库 [下载](https://github.com/squirrelinsouthern/Monet-s-Garden) 或使用命令行克隆到本地
 ```$xslt
-$ git clone git@github.com:squirrelinsouthern/Monent-s-Garden
+$ git clone git@github.com:squirrelinsouthern/Monet-s-Garden
 ```
 * 下载 / 克隆到本地后，你就可以注册某个组件然后使用了。
 
@@ -26,6 +26,7 @@ $ git clone git@github.com:squirrelinsouthern/Monent-s-Garden
 
 ```$xslt
 // 从npm5开始，会自动添加 -S （--save 缩写，会被添加到package.json中），如果是npm5以下版本，请自行添加 -S
+$ npm i monet-garden-ui
 $ npm i -S monet-garden-ui
 $ yarn add monet-garden-ui
 ```

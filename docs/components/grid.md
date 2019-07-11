@@ -8,7 +8,7 @@ sidebarDepth: 2
 ## 24栏栅格
 #### 预览
 <ClientOnly>
-    <grid1-demo></grid1-demo>
+  <grid1-demo/>
 </ClientOnly>
 
 ```html{1}
@@ -63,9 +63,7 @@ sidebarDepth: 2
 ```
 ## 设置gutter
 #### 预览
-<ClientOnly>
-    <grid2-demo></grid2-demo>
-</ClientOnly>
+<grid2-demo></grid2-demo>
 
 ```html{1}
 <m-row :gutter="20">

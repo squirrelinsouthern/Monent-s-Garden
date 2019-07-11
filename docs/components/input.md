@@ -8,7 +8,7 @@ sidebarDepth: 2
 ## 基础用法
 #### 预览
 <ClientOnly>
-    <input1-demo></input1-demo>
+<input1-demo></input1-demo>
 </ClientOnly>
 
 ```html{1}
@@ -16,10 +16,11 @@ sidebarDepth: 2
 <m-input placeholder="不可更改" :no-change="true"></m-input>
 <m-input placeholder="禁止输入" :stop-use="true"></m-input>
 ```
+
 ## error状态
 #### 预览
 <ClientOnly>
-    <input2-demo></input2-demo>
+<input2-demo></input2-demo>
 </ClientOnly>
 
 ```html{1}
@@ -28,7 +29,7 @@ sidebarDepth: 2
 ## 双向绑定
 #### 预览
 <ClientOnly>
-    <input3-demo></input3-demo>
+<input3-demo></input3-demo>
 </ClientOnly>
 
 ```html{1}

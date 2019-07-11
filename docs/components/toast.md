@@ -8,7 +8,7 @@ sidebarDepth: 2
 ## $toast基础用法
 #### 预览
 <ClientOnly>
-    <toast1-demo></toast1-demo>
+<toast1-demo></toast1-demo>
 </ClientOnly>
 
 ```html{1}
@@ -19,7 +19,7 @@ sidebarDepth: 2
 ## 设置关闭按钮
 #### 预览
 <ClientOnly>
-    <toast2-demo></toast2-demo>
+<toast2-demo></toast2-demo>
 </ClientOnly>
 
 ```html{1}
@@ -53,7 +53,7 @@ methods:{
 ## 支持HTML
 #### 预览
 <ClientOnly>
-    <toast3-demo></toast3-demo>
+<toast3-demo></toast3-demo>
 </ClientOnly>
 
 ```html{1}
